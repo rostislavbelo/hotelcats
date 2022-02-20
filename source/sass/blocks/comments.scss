@@ -1,0 +1,86 @@
+.comments {
+  max-width: 1366px;
+  position: relative;
+  margin: 0 auto;
+
+  &::after {
+    @include pseudo;
+    width: 357px;
+    height: 267px;
+    background: url("../img/icons/paw-big.svg") no-repeat;
+    right: 50%;
+    transform: translateX(740px);
+    top: -135px;
+    z-index: -1;
+  }
+}
+
+.comments h2 {
+  font-family: $rubik;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  color: #1A212F;
+  margin: 0 50px 50px;
+  text-align: center;
+}
+
+.comments__wrapper {
+  max-width: 1210px;
+  margin: 0 auto 30px;
+  overflow-x: hidden;
+  padding: 0 0 0 40px;
+  position: relative;
+}
+
+.comments__list {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  list-style-type: none;
+  width: max-content;
+}
+
+.comments__item {
+  width: 470px;
+  min-height: 206px;
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  padding: 35px 38px 20px 70px;
+  box-sizing: border-box;
+  margin: 0 30px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+
+  &::after {
+    @include pseudo;
+    width: 27px;
+    height: 56px;
+    top: 38px;
+    left: 36px;
+    background: url("../img/icons/quotes.svg") no-repeat;
+  }
+}
+
+.comments__item p {
+  font-family: $lato;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 140%;
+  color: #1a212f;
+  margin: 0 0 20px 0;
+  width: 100%;
+}
+
+.comments__item time,
+.comments__item cite {
+  font-family: $lato;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #848484;
+}

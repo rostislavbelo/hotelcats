@@ -1,0 +1,191 @@
+.promo {
+  width: 100%;
+  min-height: 504px;
+  background: #fac663 url("../img/background-top-index.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0 0 140px 0;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-top-index@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.promo__wrapper {
+  margin: 0 auto;
+  max-width: 1366px;
+  padding: 153px 198px 40px;
+  height: 100%;
+  min-height: 504px;
+  box-sizing: border-box;
+
+  @media (min-width: 1023px) and (max-width: 1165px) {
+    padding-left: 130px;
+  }
+}
+
+.promo__wrapper span {
+  display: block;
+  font-family: $lato;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #1a212f;
+  margin: 0 0 20px 0;
+  max-width: 420px;
+}
+
+.promo__wrapper p {
+  font-family: $rubik;
+  font-weight: bold;
+  font-size: 62px;
+  line-height: 73px;
+  color: #1a212f;
+  margin: 0 0 20px 0;
+  max-width: 420px;
+}
+
+.promo__wrapper h1 {
+  margin: 0 0 40px 0;
+  font-family: $lato;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: #1A212F;
+  max-width: 420px;
+}
+
+.promo__button {
+  width: 206px;
+  height: 50px;
+  padding: 3px 0 0 30px;
+  color: #ff7236;
+  background: #fffefd;
+  font-size: 16px;
+  line-height: 19px;
+  border: none;
+}
+
+.promo__button::after {
+  @include pseudo;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff7236 url("../img/icons/paw-in-button-white.svg") no-repeat;
+  background-size: 20 17;
+  background-position: 50%;
+}
+
+.promo__button:hover {
+  color: #fffefd;
+  background: #ff7236;
+  transition-duration: 0.4s;
+
+  &::after {
+    transition-duration: 0.5s;
+    background-color: #ffffff;
+    background-image: url("../img/icons/paw-in-button.svg");
+  }
+}
+
+@media (max-width: $desktop-width) {
+  .promo {
+    width: 100%;
+    min-height: 504px;
+    background: #fac663 url("../img/tablet/background-top-index.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 0 0 80px 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/tablet/background-top-index@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .promo__wrapper {
+    margin: 0 auto;
+    max-width: 1366px;
+    padding: 135px 478px 30px 25px;
+    height: 100%;
+    min-height: 504px;
+    box-sizing: border-box;
+
+    @media (min-width: 1023px) and (max-width: 1165px) {
+      padding-left: 130px;
+    }
+  }
+
+  .promo__wrapper span {
+    display: block;
+    font-family: $lato;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1a212f;
+    margin: 0 0 20px 0;
+    max-width: 420px;
+  }
+
+  .promo__wrapper p {
+    font-family: $rubik;
+    font-weight: bold;
+    font-size: 57px;
+    line-height: 68px;
+    color: #1a212f;
+    margin: 0 0 20px 0;
+    max-width: 300px;
+  }
+
+  .promo__wrapper h1 {
+    margin: 0 0 40px 0;
+    font-family: $lato;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #1A212F;
+    max-width: 300px;
+  }
+
+  .promo__button {
+    width: 206px;
+    height: 50px;
+    padding: 3px 0 0 30px;
+    color: #ff7236;
+    background: #fffefd;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+  }
+
+  .promo__button::after {
+    @include pseudo;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff7236 url("../img/icons/paw-in-button-white.svg") no-repeat;
+    background-size: 20 17;
+    background-position: 50%;
+  }
+
+  .promo__button:hover {
+    color: #fffefd;
+    background: #ff7236;
+    transition-duration: 0.4s;
+
+    &::after {
+      transition-duration: 0.5s;
+      background-color: #ffffff;
+      background-image: url("../img/icons/paw-in-button.svg");
+    }
+  }
+}

@@ -1,0 +1,57 @@
+include ../components/variables.pug
+include mixines.pug
+
+footer.page-footer
+  .page-footer__wrapper
+    .page-footer__contacts
+      .page-footer__info
+        h2.visually-hidden Адрес и контакты гостиницы Котейка
+        p Как нас найти
+        ul.page-footer__info-list
+          li.page-footer__info-item.page-footer__contacts-address
+            h3 Адрес
+            p Санкт-Петербург, ул&nbsp;Большая&nbsp;Конюшенная, д 19
+          li.page-footer__info-item.page-footer__contacts-working
+            h3 Режим работы
+            p Ежедневно, с 9:00 до 20:00
+          li.page-footer__info-item.page-footer__contacts-phone
+            h3 Телефон
+            a.page-footer__phone-link(href="tel:88003335599" aria-label="Телефон гостиницы Котейка")
+              span 8 (800) 333-55-99
+          li.page-footer__info-item.page-footer__contacts-email
+            h3 E-mail
+            a.page-footer__email-link(href="mailto:info@cat-hotel.ru" aria-label="Электронная почта гостиницы Котейка")
+              span info@cat-hotel.ru
+        .page-footer__social
+          h3 Социальные сети
+          ul.page-footer__social-list
+            li.page-footer__social-item
+              a.page-footer__social-link(href="#" aria-label="Гостиница Котейка на Фейсбуке")
+                svg(width="22" height="22")
+                  use(xlink:href="img/sprite_auto.svg#icon-facebook")
+            li.page-footer__social-item
+              a.page-footer__social-link(href="#" aria-label="Гостиница Котейка в Инстаграме")
+                svg(width="22" height="22")
+                  use(xlink:href="img/sprite_auto.svg#icon-instagram")
+            li.page-footer__social-item
+              a.page-footer__social-link(href="#" aria-label="Гостиница Котейка Вконтакте")
+                svg(width="22" height="22")
+                  use(xlink:href="img/sprite_auto.svg#icon-vk")
+
+      .page-footer__map#map
+        //- +picture(mapFooter)
+
+
+    include _nav-block
+
+    .page-footer__copyright
+      ul.page-footer__copyright-list
+        li.page-footer__copyright-item.page-footer__copyright-author
+          p &#169; 2019 Все права защищены
+        li.page-footer__copyright-item.page-footer__copyright-confidential
+          a.page-footer__copyright-link(href="#")
+            p Политика конфиденциальности
+
+
+
+

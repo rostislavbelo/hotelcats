@@ -1,0 +1,44 @@
+.button {
+  font-family: $lato;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: #fffefd;
+  background: #ff7236;
+  border-radius: 25px;
+  width: 230px;
+  height: 46px;
+  border: 2px solid #ff7236;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 3px 0 0 51px;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: relative;
+}
+
+.button::after {
+  @include pseudo;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: #ffffff url("../img/icons/paw-in-button.svg") no-repeat;
+  background-size: 20 17;
+  background-position: center;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.button:hover {
+  color: #ff7236;
+  background: #fffefd;
+  transition-duration: 0.4s;
+
+  &::after {
+    transition-duration: 0.5s;
+    background-color: #ff7236;
+    background-image: url("../img/icons/paw-in-button-white.svg");
+  }
+}

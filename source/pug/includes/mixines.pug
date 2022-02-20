@@ -1,0 +1,49 @@
+mixin roomsParametres([category, area, size, price])
+  h3 #{category}
+  ul.rooms__parametres-list
+    li.rooms__parametres-item.rooms__area
+      p Площадь - #{area}
+    li.rooms__parametres-item.rooms__size
+      p Размеры (ШхГхВ) — #{size}
+    li.rooms__parametres-item.roms__price
+      p Цена за сутки: #{price}
+  button.rooms__button.button(type="button") Забронировать
+
+mixin picture([urlDesktop, urlTablet, urlMobile, widthTablet, widthDesktop, widthImg, heightImg, alt, formatBase])
+  picture
+    source(type="image/webp" media="(max-width: 767px)"
+      srcset = urlMobile + ".webp 1x, " + urlMobile + "@2x" + ".webp 2x")
+    source(type="image/webp" media="(max-width: 1023px)"
+      srcset = urlTablet + ".webp 1x, " + urlTablet + "@2x" + ".webp 2x")
+    source(type="image/webp"
+      srcset = urlDesktop + ".webp 1x, " + urlDesktop + "@2x" + ".webp 2x")
+    img(src = urlDesktop + "." + formatBase, srcset= urlDesktop + "@2x." + formatBase + " 2x",
+        width = widthImg, height = heightImg, alt = alt, loading = "lazy")
+
+mixin rooms(title)
+  section.rooms
+    h2 #{title}
+    .rooms__wrapper.slider
+      ul.rooms__list
+        li.rooms__item.rooms__item--active
+          .rooms__img
+            block
+            +picture(picturesRoomsEconomPlus)
+          .rooms__info
+            block
+            +roomsParametres(roomEconomPlus)
+        li.rooms__item
+          .rooms__img
+            block
+            +picture(picturesRoomsComfort)
+          .rooms__info
+            block
+            +roomsParametres(roomComfort)
+        li.rooms__item
+          .rooms__img
+            block
+            +picture(picturesRoomsSuite)
+          .rooms__info
+            block
+            +roomsParametres(roomSuite)
+    include _slider-buttons.pug

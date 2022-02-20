@@ -1,0 +1,28 @@
+//global
+@import "global-variables.scss";
+@import "global-utilites.scss";
+@import "global-fonts.scss";
+
+//Blocks
+@import "blocks/page.scss";
+@import "blocks/page-body.scss";
+@import "blocks/page-main.scss";
+@import "blocks/button.scss";
+@import "blocks/page-header.scss";
+@import "blocks/hamburger.scss";
+//@import "blocks/page-footer.scss";
+@import "blocks/nav-block.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/promo.scss";
+@import "blocks/advantage.scss";
+////@import "blocks/rooms.scss";
+//@import "blocks/slider-rooms.scss";
+//@import "blocks/comments.scss";
+
+
+//Vendor
+//@import "vendor/swiper.scss";
+//@import "vendor/leaflet.scss";
+
+//JS
+//@import "js/js.scss";

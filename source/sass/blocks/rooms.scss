@@ -1,0 +1,115 @@
+.rooms {
+  max-width: 1366px;
+  margin: 0 auto 110px;
+}
+
+.rooms h2 {
+  font-family: $rubik;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  color: #1A212F;
+  text-align: center;
+  margin: 0 50px 70px 50px;
+}
+
+.rooms__wrapper {
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+}
+
+.rooms__wrapper::after {
+  @include pseudo;
+  width: 484px;
+  height: 151px;
+  background: url("../img/icons/feesh.svg");
+  top: -84px;
+  left: 0;
+  z-index: -1;
+}
+
+.rooms__list {
+  list-style-type: none;
+  padding: 0;
+  max-width: 1040px;
+  margin: 0 auto 55px;
+}
+
+.rooms__item {
+  position: relative;
+  display: none;
+}
+
+.rooms__item--active {
+  display: block;
+}
+
+.rooms__img {
+  width: 600px;
+  height: 404px;
+}
+
+.rooms__info {
+  width: 500px;
+  height: 284px;
+  background: #ffffff;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 8px;
+  padding: 40px 50px 40px 100px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+  @media (min-width: 1023px) and (max-width: 1120px) {
+    width: calc(1vw * 470 / (1120 / 100));
+    padding-left: 60px;
+  }
+}
+
+.rooms__info h3 {
+  font-family: $rubik;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  color: #1a212f;
+  margin: 0 0 30px 0;
+}
+
+.rooms__parametres-list {
+  list-style-type: none;
+  padding: 0 0 0 22px;
+}
+
+.rooms__parametres-item {
+  position: relative;
+}
+
+.rooms__parametres-item::after {
+  @include pseudo;
+  width: 13px;
+  height: 13px;
+  background: #FAC663;
+  border-radius: 50%;
+  left: -22px;
+  top: 1.5px;
+}
+
+.rooms__parametres-item p {
+  font-family: $lato;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1A212F;
+  margin: 0 0 20px 0;
+}
+
+.rooms__button {
+  width: 206px;
+  height: 50px;
+  box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+  padding: 0 0 0 30px;
+}

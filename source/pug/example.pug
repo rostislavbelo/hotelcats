@@ -1,0 +1,61 @@
+html(lang="ru")
+  head
+    meta(charset="utf-8")
+    title= "Учимся работать с шаблонизатором Pug"
+  body
+    h1 Hello, World!
+    ul.list#listItems
+      li.list__item Значение 1
+      li.list__item Значение 2
+      li.list__item Значение 3
+      li.list__item Значение 4
+    |
+    |
+    a.dali(href="#") Ссылка
+    |
+    |
+    a(href="#" target="_blank") Ссылка
+    |
+    |
+    a(class="cool" href="#" target="_blank") Ссылка
+    a(href='google.com') Google
+    |
+    |
+    a.button (href='google.com')
+    span.gorka GooglerS
+    |
+    |
+    a(class='button' href='google.com') Google
+    |
+    |
+    - var url = 'pug-test.html';
+    a(href='/' + url) Link
+    |
+    |
+    - url = 'https://example.com/'
+    a(href=url) Another link
+    - var classes = ['foo', 'bar', 'baz']
+    a(class=classes)
+    |
+    |
+    //- the class attribute may also be repeated to merge arrays
+    a.bang(class=classes class=['bing'])
+    |
+    |
+    ul
+      each val, index in ['zero', 'one', 'two']
+        li= index + ': ' + val
+    ul
+      li: a(href="#") Link
+      li: a(href="#") Link
+      li: a(href="#") LinkersSaSsss
+      li: a(href="#") Link
+      li: a(href="#") LinkersSaSsss12000000000000000000000000000000000
+      li: a(href="#") Link
+      li
+        a.rester(href="#") Про<b>грамм</b>а
+      li
+        a.rester(href="#") Про
+          <b>грамм
+        |а
+
