@@ -1,70 +1,57 @@
-include components/variables.pug
-include includes/mixines.pug
+extends components/main-prototype
+block name-page
+  - var currentUrl = "index.html"
+block main-content
+  section.promo
+    .promo__wrapper
+      span Санкт-Петербург
+      p Котейка
+      h1 Уютная гостиница для котов и&nbsp;кошек
+      a.promo__button.button.button__order(href='#popup_booking' aria-label="Забронировать номер") Забронировать
+  section.advantages#advantages
+    .advantages__wrapper
+      h2.visually-hidden Преимущества гостиницы Котейка
+      .advantages__title
+        p Почему мы?
+      ul.advantages__list
+        li.advantages__item
+          svg(width="91" height="91")
+            use(xlink:href="img/sprite_auto.svg#icon-temperature")
+          h3 Комфортная температура
+          p Во всех номерах поддерживается комфортная температура
+            |в пределах 23&nbsp;-&nbsp;25 градусов. В каждом номере можно дополнительно
+            |отрегулировать температуру.
+        li.advantages__item
+          svg(width="91" height="91")
+            use(xlink:href="img/sprite_auto.svg#icon-video")
+          h3 Видеонаблюдение
+          p Мы предоставляем доступ в нашу систему. Вы сможете следить за своим
+            |питомцем со своего смартфона или компьютера.
+        li.advantages__item
+          svg(width="91" height="91")
+            use(xlink:href="img/sprite_auto.svg#icon-taxi")
+          h3 Услуги Зоотакси
+          p Мы приедем за вашим питомцем в любой район Санкт-Петербурга.
+        li.advantages__item
+          svg(width="91" height="91")
+            use(xlink:href="img/sprite_auto.svg#icon-food")
+          h3 Сбалансированное питание
+          p Вы можете привезти свой корм или доверить рацион своего питомца нашим профессионалам.
+        li.advantages__item
+          svg(width="91" height="91")
+            use(xlink:href="img/sprite_auto.svg#icon-cat")
+          h3 Ежедневные прогулки
+          p
+            |По вашему желанию мы выгуливаем вашего питомца два раза в день на специализированной
+            |закрытой территории.
+        li.advantages__item
+          svg(width="91" height="91")
+            use(xlink:href="img/sprite_auto.svg#icon-doctor")
+          h3 Лучшие ветеринары
+          p В гостинице 24 часа дежурит ветеринарный врач, который окажет любую помощь в случае необходимости.
 
--var currentUrl = "index.html"
+  +rooms("Номера")
 
-doctype html
-html.page(lang=lang)
-
-  include includes/_head
-  body.page-body
-    header.page-header.nav-block
-      include includes/_nav-block
-    main.page-main
-      section.promo
-        .promo__wrapper
-          span Санкт-Петербург
-          p Котейка
-          h1 Уютная гостиница для котов и&nbsp;кошек
-          button.promo__button.button(type="button" aria-label="Забронировать номер") Забронировать
-      section.advantages
-        .advantages__wrapper
-          h2.visually-hidden Преимущества гостиницы Котейка
-          .advantages__title
-            p Почему мы?
-          ul.advantages__list
-            li.advantages__item
-              svg(width="91" height="91")
-                use(xlink:href="img/sprite_auto.svg#icon-temperature")
-              h3 Комфортная температура
-              p Во всех номерах поддерживается комфортная температура
-                |в пределах 23&nbsp;-&nbsp;25 градусов. В каждом номере можно дополнительно
-                |отрегулировать температуру.
-            li.advantages__item
-              svg(width="91" height="91")
-                use(xlink:href="img/sprite_auto.svg#icon-video")
-              h3 Видеонаблюдение
-              p Мы предоставляем доступ в нашу систему. Вы сможете следить за своим
-                |питомцем со своего смартфона или компьютера.
-            li.advantages__item
-              svg(width="91" height="91")
-                use(xlink:href="img/sprite_auto.svg#icon-taxi")
-              h3 Услуги Зоотакси
-              p Мы приедем за вашим питомцем в любой район Санкт-Петербурга.
-            li.advantages__item
-              svg(width="91" height="91")
-                use(xlink:href="img/sprite_auto.svg#icon-food")
-              h3 Сбалансированное питание
-              p Вы можете привезти свой корм или доверить рацион своего питомца нашим профессионалам.
-            li.advantages__item
-              svg(width="91" height="91")
-                use(xlink:href="img/sprite_auto.svg#icon-cat")
-              h3 Ежедневные прогулки
-              p
-                |По вашему желанию мы выгуливаем вашего питомца два раза в день на специализированной
-                |закрытой территории.
-            li.advantages__item
-              svg(width="91" height="91")
-                use(xlink:href="img/sprite_auto.svg#icon-doctor")
-              h3 Лучшие ветеринары
-              p В гостинице 24 часа дежурит ветеринарный врач, который окажет любую помощь в случае необходимости.
-
-      +rooms("Номера")
-
-      include includes/_comments.pug
-
-    include includes/_footer
-    //script(src="js/vendor.js")
-    //script(src="js/main.js")
+  include includes/_comments.pug
 
 

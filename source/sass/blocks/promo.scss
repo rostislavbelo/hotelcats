@@ -44,7 +44,7 @@
   line-height: 73px;
   color: #1a212f;
   margin: 0 0 20px 0;
-  max-width: 420px;
+  max-width: 365px;
 }
 
 .promo__wrapper h1 {
@@ -66,6 +66,10 @@
   font-size: 16px;
   line-height: 19px;
   border: none;
+  text-decoration: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .promo__button::after {
@@ -148,6 +152,127 @@
     font-family: $lato;
     font-weight: 500;
     font-size: 20px;
+    line-height: 24px;
+    color: #1A212F;
+    max-width: 300px;
+  }
+
+  .promo__button {
+    width: 206px;
+    height: 50px;
+    padding: 3px 0 0 30px;
+    color: #ff7236;
+    background: #fffefd;
+    font-size: 16px;
+    line-height: 19px;
+    border: none;
+    text-decoration: none;
+  }
+
+  .promo__button::after {
+    @include pseudo;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #ff7236 url("../img/icons/paw-in-button-white.svg") no-repeat;
+    background-size: 20 17;
+    background-position: 50%;
+  }
+
+  .promo__button:hover {
+    color: #fffefd;
+    background: #ff7236;
+    transition-duration: 0.4s;
+
+    &::after {
+      transition-duration: 0.5s;
+      background-color: #ffffff;
+      background-image: url("../img/icons/paw-in-button.svg");
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .promo {
+    position: relative;
+    width: 100%;
+    min-height: 340px;
+    background: linear-gradient(180deg, #FF9B53 -5.96%, #F8B653 74.9%);
+    margin: 0 0 60px;
+    /* url("../img/mobile/background-top-index.jpg") no-repeat */
+    ;
+    /*     background-size: contain;
+    background-position: top;
+    margin: 0 0 80px 0;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/mobile/background-top-index@2x.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    } */
+
+    &::after {
+      @include pseudo;
+      width: 355px;
+      height: 450px;
+      background: url("../img/icons/paw-big-mobile-white.svg") no-repeat;
+      transform: scale(0.25) translateX(1200px);
+      top: -156px;
+      right: 50%;
+    }
+
+    &::before {
+      @include pseudo;
+      width: 355px;
+      height: 450px;
+      background: url("../img/icons/paw-big-mobile-white.svg") no-repeat;
+      transform: scale(.19) scaleX(-1) translateX(1571px);
+      bottom: -196px;
+      left: 50%;
+    }
+  }
+
+  .promo__wrapper {
+    margin: 0 auto;
+    max-width: 1366px;
+    padding: 45px 20px;
+    height: 100%;
+    min-height: unset;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .promo__wrapper span {
+    display: block;
+    font-family: $lato;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #1a212f;
+    margin: 0 0 20px 0;
+    max-width: 420px;
+  }
+
+  .promo__wrapper p {
+    font-family: $rubik;
+    font-weight: bold;
+    font-size: 54px;
+    line-height: 62px;
+    color: #1a212f;
+    margin: 0 0 20px 0;
+    max-width: 300px;
+  }
+
+  .promo__wrapper h1 {
+    margin: 0 0 40px 0;
+    font-family: $lato;
+    font-weight: 500;
+    font-size: 16px;
     line-height: 24px;
     color: #1A212F;
     max-width: 300px;

@@ -4,37 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Гостиница для котов и кошек">
     <title>Котейка - гостиница для котиков</title>
-    <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-600.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/rubik-v18-latin_cyrillic-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/rubik-v18-latin_cyrillic-500.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/rubik-v18-latin_cyrillic-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-Medium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
-  <body class="page-body">
-    <header class="page-header nav-block">
+  <body class="page-body js js__body">
+    <header class="page-header nav-block js__header">
       <div class="nav-block__wrapper">
-        <div class="nav-block__logo-wrapper"><a class="nav-block__logo-link" aria-label="Логотип Котейка" href="#">
+        <div class="nav-block__logo-wrapper"><a class="nav-block__logo-link nav-block__logo-main-href" aria-label="Логотип Котейка" href="#" tabindex="-1">
             <svg width="64" height="52">
               <use xlink:href="img/sprite_auto.svg#logo"></use>
             </svg></a></div>
-        <nav class="main-nav">
+        <nav class="main-nav js__nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="#"><span>Почему мы?</span></a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#"><span>Номера</span></a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#"><span>Отзывы</span></a></li>
-            <li class="main-nav__item"><a class="main-nav__link" href="#"><span>Как нас найти</span></a></li>
+            <li class="main-nav__item js__nav-element main-nav__item--active"><a class="main-nav__link" href="#advantages"><span>Главное</span></a></li>
+            <li class="main-nav__item js__nav-element"><a class="main-nav__link" href="#"><span>Номера</span></a></li>
+            <li class="main-nav__item js__nav-element"><a class="main-nav__link" href="#comments"><span>Отзывы</span></a></li>
+            <li class="main-nav__item js__nav-element"><a class="main-nav__link" href="#contacts"><span>Как нас найти</span></a></li>
           </ul>
         </nav>
-        <button class="nav-block__button hamburger"><span class="hamburger__element"></span><span class="hamburger__element"></span><span class="hamburger__element"></span></button>
+        <button class="nav-block__button hamburger js__nav-button"><span class="hamburger__element"></span><span class="hamburger__element"></span><span class="hamburger__element"></span></button>
       </div>
     </header>
-    <main class="page-main">
+    <main class="page-main js__block-hidden">
       <section class="promo">
         <div class="promo__wrapper"><span>Санкт-Петербург</span>
           <p>Котейка</p>
-          <h1>Уютная гостиница для котов и&nbsp;кошек</h1>
-          <button class="promo__button button" type="button" aria-label="Забронировать номер">Забронировать</button>
+          <h1>Уютная гостиница для котов и&nbsp;кошек</h1><a class="promo__button button button__order" href="#popup_booking" aria-label="Забронировать номер">Забронировать</a>
         </div>
       </section>
-      <section class="advantages">
+      <section class="advantages" id="advantages">
         <div class="advantages__wrapper">
           <h2 class="visually-hidden">Преимущества гостиницы Котейка</h2>
           <div class="advantages__title">
@@ -97,7 +103,7 @@
         <h2>Номера</h2>
         <div class="rooms__wrapper slider">
           <ul class="rooms__list">
-            <li class="rooms__item rooms__item--active">
+            <li class="rooms__item rooms__item-1 rooms__item--active">
               <div class="rooms__img">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/economical.webp 1x, img/economical@2x.webp 2x">
@@ -117,11 +123,10 @@
                   <li class="rooms__parametres-item roms__price">
                     <p>Цена за сутки: 200₽</p>
                   </li>
-                </ul>
-                <button class="rooms__button button" type="button">Забронировать</button>
+                </ul><a class="rooms__button button button__order" href="#popup_booking">Забронировать</a>
               </div>
             </li>
-            <li class="rooms__item">
+            <li class="rooms__item rooms__item-2">
               <div class="rooms__img">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/comfort.webp 1x, img/comfort@2x.webp 2x">
@@ -141,11 +146,10 @@
                   <li class="rooms__parametres-item roms__price">
                     <p>Цена за сутки: 250₽</p>
                   </li>
-                </ul>
-                <button class="rooms__button button" type="button">Забронировать</button>
+                </ul><a class="rooms__button button button__order" href="#popup_booking">Забронировать</a>
               </div>
             </li>
-            <li class="rooms__item">
+            <li class="rooms__item rooms__item-3">
               <div class="rooms__img">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/suite.webp 1x, img/suite@2x.webp 2x">
@@ -165,8 +169,7 @@
                   <li class="rooms__parametres-item roms__price">
                     <p>Цена за сутки: 350₽</p>
                   </li>
-                </ul>
-                <button class="rooms__button button" type="button">Забронировать</button>
+                </ul><a class="rooms__button button button__order" href="#popup_booking">Забронировать</a>
               </div>
             </li>
           </ul>
@@ -193,24 +196,72 @@
           </ul>
         </div>
       </section>
-      <section class="comments slider">
+      <section class="comments slider" id="comments">
         <h2>Отзывы</h2>
         <div class="comments__wrapper">
           <ul class="comments__list">
             <li class="comments__item">
               <p>Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И&nbsp;мы и котик остались очень довольны!</p>
-              <cite>Валерия Гришаева</cite>
-              <time datetime="2019-11-15">15 ноября, 2019</time>
+              <div class="comments__about-message">
+                <cite>Валерия Гришаева</cite>
+                <time datetime="2019-11-15">15 ноября, 2019</time>
+              </div>
             </li>
             <li class="comments__item">
               <p>Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.</p>
-              <cite>Екатерина Минаева</cite>
-              <time datetime="2019-10-10">10 октября, 2019</time>
+              <div class="comments__about-message">
+                <cite>Екатерина Минаева</cite>
+                <time datetime="2019-10-10">10 октября, 2019</time>
+              </div>
             </li>
             <li class="comments__item">
               <p>Мой кот — настоящая привереда, угодить ему сложно. У меня были особые требования к уходу за ним, и “Котейка” отлично справились. Я часто наблюдал по видео за питомцем со своего телефона, это очень удобно.</p>
-              <cite>Павел Нечаев</cite>
-              <time datetime="2019-08-02">2 августа, 2019</time>
+              <div class="comments__about-message">
+                <cite>Павел Нечаев</cite>
+                <time datetime="2019-08-02">2 августа, 2019</time>
+              </div>
+            </li>
+            <li class="comments__item">
+              <p>Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И&nbsp;мы и котик остались очень довольны!</p>
+              <div class="comments__about-message">
+                <cite>Галерия Вришаева</cite>
+                <time datetime="2019-11-15">15 ноября, 2019</time>
+              </div>
+            </li>
+            <li class="comments__item">
+              <p>Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.</p>
+              <div class="comments__about-message">
+                <cite>Катерина Пинаева</cite>
+                <time datetime="2019-10-10">10 октября, 2019</time>
+              </div>
+            </li>
+            <li class="comments__item">
+              <p>Мой кот — настоящая привереда, угодить ему сложно. У меня были особые требования к уходу за ним, и “Котейка” отлично справились. Я часто наблюдал по видео за питомцем со своего телефона, это очень удобно.</p>
+              <div class="comments__about-message">
+                <cite>Навел Печаев</cite>
+                <time datetime="2019-08-02">2 августа, 2019</time>
+              </div>
+            </li>
+            <li class="comments__item">
+              <p>Первый раз пришлось оставить нашего котика в гостинице, очень переживали. Администратор Мария каждый день высылала нам фото нашего питомца, рассказывала, как он себя чувствует. И&nbsp;мы и котик остались очень довольны!</p>
+              <div class="comments__about-message">
+                <cite>Калерия Гриша</cite>
+                <time datetime="2019-11-15">15 ноября, 2019</time>
+              </div>
+            </li>
+            <li class="comments__item">
+              <p>Гостиницу для питомцев нам посоветовали друзья. Они всегда оставляют здесь своего кота, когда уезжают. В “Котейке” очень хорошо заботятся о питомцах, в гостинице очень чисто. Всем рекомендую! Будем обращаться еще.</p>
+              <div class="comments__about-message">
+                <cite>Рина Янаева</cite>
+                <time datetime="2019-10-10">10 октября, 2019</time>
+              </div>
+            </li>
+            <li class="comments__item">
+              <p>Мой кот — настоящая привереда, угодить ему сложно. У меня были особые требования к уходу за ним, и “Котейка” отлично справились. Я часто наблюдал по видео за питомцем со своего телефона, это очень удобно.</p>
+              <div class="comments__about-message">
+                <cite>Вел Чаев</cite>
+                <time datetime="2019-08-02">2 августа, 2019</time>
+              </div>
             </li>
           </ul>
         </div>
@@ -237,9 +288,9 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer">
+    <footer class="page-footer js__block-hidden">
       <div class="page-footer__wrapper">
-        <div class="page-footer__contacts">
+        <div class="page-footer__contacts" id="contacts">
           <div class="page-footer__info">
             <h2 class="visually-hidden">Адрес и контакты гостиницы Котейка</h2>
             <p>Как нас найти</p>
@@ -280,19 +331,19 @@
           <div class="page-footer__map" id="map"></div>
         </div>
         <div class="nav-block__wrapper">
-          <div class="nav-block__logo-wrapper"><a class="nav-block__logo-link" aria-label="Логотип Котейка" href="#">
+          <div class="nav-block__logo-wrapper"><a class="nav-block__logo-link nav-block__logo-main-href" aria-label="Логотип Котейка" href="#" tabindex="-1">
               <svg width="64" height="52">
                 <use xlink:href="img/sprite_auto.svg#logo"></use>
               </svg></a></div>
-          <nav class="main-nav">
+          <nav class="main-nav js__nav">
             <ul class="main-nav__list">
-              <li class="main-nav__item main-nav__item--active"><a class="main-nav__link" href="#"><span>Почему мы?</span></a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#"><span>Номера</span></a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#"><span>Отзывы</span></a></li>
-              <li class="main-nav__item"><a class="main-nav__link" href="#"><span>Как нас найти</span></a></li>
+              <li class="main-nav__item js__nav-element main-nav__item--active"><a class="main-nav__link" href="#advantages"><span>Главное</span></a></li>
+              <li class="main-nav__item js__nav-element"><a class="main-nav__link" href="#"><span>Номера</span></a></li>
+              <li class="main-nav__item js__nav-element"><a class="main-nav__link" href="#comments"><span>Отзывы</span></a></li>
+              <li class="main-nav__item js__nav-element"><a class="main-nav__link" href="#contacts"><span>Как нас найти</span></a></li>
             </ul>
           </nav>
-          <button class="nav-block__button hamburger"><span class="hamburger__element"></span><span class="hamburger__element"></span><span class="hamburger__element"></span></button>
+          <button class="nav-block__button hamburger js__nav-button"><span class="hamburger__element"></span><span class="hamburger__element"></span><span class="hamburger__element"></span></button>
         </div>
         <div class="page-footer__copyright">
           <ul class="page-footer__copyright-list">
@@ -305,7 +356,42 @@
         </div>
       </div>
     </footer>
-    <!--script(src="js/vendor.js")-->
-    <!--script(src="js/main.js")-->
+    <div class="popup popup_booking js js__booking" id="popup_booking">
+      <form class="popup_booking-form js__booking-form" action="https://echo.htmlacademy.ru" method="post">
+        <h2>Забронировать номер</h2>
+        <div class="popup_booking-input-name-owner">
+          <label class="visually-hidden" for="owner-name">Ваше имя</label>
+          <input type="text" minlength="2" maxlength="40" id="owner-name" name="owner-name" placeholder="Ваше имя" title="Введите Ваше имя" required="">
+        </div>
+        <div class="popup_booking-input-name-cat">
+          <label class="visually-hidden" for="cat-name">Имя Питомца</label>
+          <input type="text" minlength="1" maxlength="40" id="cat-name" name="cat-name" placeholder="Имя Питомца" title="Введите имя Вашего Питомца">
+        </div>
+        <div class="popup_booking-input-phone">
+          <label class="visually-hidden" for="phone">Телефон</label>
+          <input type="tel" minlength="7" maxlength="14" id="phone" name="phone" placeholder="Телефон" title="Введите Ваш номер телефона" pattern="[0-9]{7,14}">
+        </div>
+        <div class="popup_booking-input-email">
+          <label class="visually-hidden" for="email">Телефон</label>
+          <input type="email" minlength="5" maxlength="45" id="email" name="email" placeholder="E-mail" title="Введите Вашу электронную почту" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+.[a-z]{2,4}$" required="">
+        </div>
+        <div class="popup_booking-input-dates"><span>Дата заезда&#8195;с&#8194;
+            <label class="visually-hidden" for="check-in">Дата заезда</label>
+            <input type="date" id="check-in" name="check-in" value="2022-01-26" title="Введите желаемую дату заезда питомца" required="">&#8195;по&#8195;
+            <label class="visually-hidden" for="check-out">Дата выезда</label>
+            <input type="date" id="check-out" name="check-out" value="2022-02-26" placeholder="26.02.2022" title="Введите желаемую дату окончания размещения" required="" pattern="[0-9]{2}.[0-9]{2}.[0-9]{4}"></span></div>
+        <button class="popup_booking-button-submit button js__booking-button-submit" type="submit">Отправить заявку</button>
+        <button class="popup_booking-button-close-form js__booking-button-close-form" type="button"></button>
+      </form>
+    </div>
+    <div class="popup popup-confirm js js__popup-confirm">
+      <div class="popup-confirm__wrapper">
+        <p>Спасибо за заявку!</p><span>Мы свяжемся с вами в ближайшее время</span>
+        <button class="popup-confirm__button-ok button js__button-confirm-ok" type="button">Ок</button>
+        <button class="popup-confirm__button-closed js__button-confirm-close" type="button"></button>
+      </div>
+    </div>
+    <script src="js/vendor.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

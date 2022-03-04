@@ -1,0 +1,191 @@
+.popup_booking-form {
+  width: 570px;
+  min-height: 649px;
+  background: #fffefd;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 10px;
+  position: relative;
+  padding: 70px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px auto;
+  overflow: hidden;
+
+  &::after {
+    @include pseudo;
+    background: url("../img/icons/paw-big.svg") no-repeat;
+    width: 350px;
+    height: 350px;
+    top: -134px;
+    left: -127px;
+    transform: scale(0.4) rotate(114deg);
+  }
+}
+
+.popup_booking-input-dates,
+.popup_booking-input-email,
+.popup_booking-input-phone,
+.popup_booking-input-name-cat,
+.popup_booking-input-name-owner {
+  width: 100%;
+  margin: 0 0 20px 0;
+}
+
+.popup-confirm__wrapper p,
+.popup_booking-form h2 {
+  font-family: $rubik;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 33px;
+  color: #1a212f;
+  margin: 0 0 50px 0;
+}
+
+.popup_booking-form input {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+  border-radius: 25px;
+  padding: 3px 0 0 30px;
+  color: #1a212f;
+  font-family: $lato;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.popup_booking-input-dates {
+  margin-bottom: 50px;
+}
+
+.popup_booking-input-dates input {
+  width: 129px;
+  padding: 3px 0 0 20px;
+  background: #ffffff;
+  font-family: $lato;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #b5b5b5;
+  padding: 3px 0 0 10px;
+
+  &::-webkit-calendar-picker-indicator {
+    transform: scale(.8);
+    margin: 0 3px 0 0;
+    padding-bottom: 6px;
+  }
+}
+
+.popup_booking-input-dates span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $lato;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.popup-confirm__button-closed,
+.popup_booking-button-close-form {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: none;
+
+  &::after {
+    @include pseudo;
+    width: 20px;
+    height: 2px;
+    background: #1a212f;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    @include pseudo;
+    width: 20px;
+    height: 2px;
+    background: #1a212f;
+    transform: rotate(-45deg);
+  }
+
+  &:hover::after {
+    background: #ff7236;
+  }
+
+  &:hover::before {
+    background: #ff7236;
+  }
+}
+
+.popup-confirm__button-closed {
+  display: block;
+}
+
+.popup_booking-button-submit.button {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 3px 0 0 32px;
+}
+
+.popup-confirm {
+  display: none;
+}
+
+.popup-confirm__wrapper {
+  width: 570px;
+  min-height: 269px;
+  background: #fffefd;
+  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  border-radius: 10px;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 70px 70px 40px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    @include pseudo;
+    background: url("../img/icons/paw-big.svg") no-repeat;
+    width: 350px;
+    height: 350px;
+    bottom: -121px;
+    left: -127px;
+    transform: scale(0.4) rotate(29deg);
+  }
+}
+
+.popup-confirm__wrapper p {
+  margin-bottom: 25px;
+}
+
+.popup-confirm__wrapper span {
+  margin-bottom: 50px;
+  font-family: $lato;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #1a212f;
+}
+
+.popup-confirm__button-ok {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 3px 0 0 34px;
+  width: 122px;
+  height: 50px;
+
+}

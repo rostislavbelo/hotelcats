@@ -1,0 +1,19 @@
+include variables.pug
+include ../includes/mixines.pug
+
+doctype html
+html.page(lang=lang)
+
+  include ../includes/_head
+  body.page-body.js.js__body
+    block name-page
+    header.page-header.nav-block.js__header
+      include ../includes/_nav-block
+    main.page-main.js__block-hidden
+      block main-content
+
+    include ../includes/_footer
+    include ../includes/_popup-booking
+    include ../includes/_popup-confirm
+    script(src="js/vendor.js")
+    script(src="js/main.js")

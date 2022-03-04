@@ -1,10 +1,19 @@
-.js__filters--hidden .js__filter-inputs {
+// Стили для функционирования модальных окон
+.js__booking--no-active {
   display: none;
 }
 
-.js__filters--hidden h3::before {
-  transform: rotate(-45deg);
-  top: 25px;
+.js__popup--active {
+  display: block;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.js__booking-button-close-form--active {
+  display: block;
 }
 
 .js__body--no-scroll {
@@ -12,228 +21,18 @@
   overflow-y: scroll;
 }
 
-.js__popup-login--show {
-  display: flex;
-}
-
-.js__questions--hidden span {
-  display: none;
-}
-
-.js__questions--hidden p::before {
-  transform: rotate(-45deg);
-  top: 46px;
-}
-
-.js__questions--hidden p {
-  padding-bottom: 43px;
-}
-
-.js__questions p {
-  cursor: pointer;
-}
-
-.js__styles-swiper-list--no-js {
-  overflow-x: scroll;
-}
-
-.js__styles-swiper-item--no-js {
-  margin-right: 30px;
-}
-
-.js__styles-swiper-button--no-js {
-  display: none;
-}
-
+// Стили для функционирования мобильного меню
 @media (max-width: $desktop-width) {
-  .js__block-hidden--active {
-    display: none;
-  }
-
-  .js__filters--hidden h3::before {
-    transform: rotate(-45deg);
-    top: 34px;
-  }
-
-  .js__filter--hidden {
-    display: none;
-    width: 100%;
-  }
-
-  .js__form-button-closed--active {
-    border: none;
+  .js__nav-button--active {
     display: block;
-    position: absolute;
-    top: -15px;
-    right: -17px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #1d1613;
-    cursor: pointer;
-    z-index: 50;
-
-
-    &::after {
-      @include pseudo;
-      width: 17px;
-      height: 1.5px;
-      background: #ffffff;
-      transform: rotate(45deg);
-      top: 15px;
-      left: 7px;
-    }
-
-    &::before {
-      @include pseudo;
-      width: 17px;
-      height: 1.5px;
-      background: #ffffff;
-      transform: rotate(-45deg);
-      top: 15px;
-      left: 7px;
-    }
-
-    &:hover {
-      opacity: 0.75;
-    }
   }
 
-  .js__filter--popup {
-    background: #ffffff;
-    position: relative;
-    top: 27px;
-    left: -20px;
-    z-index: 120;
-  }
-
-  .js__filter-background--popup {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    overflow: auto;
-  }
-
-  .js__form-button-open--active {
-    width: 100%;
-    height: 68px;
-    display: unset;
-    background: #a87b62;
-    border: 1px solid #a87b62;
-    box-sizing: border-box;
-    font-family: $sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 130%;
-    color: #ffffff;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.75;
-    }
-  }
-
-  .js__questions--hidden p::before {
-    transform: rotate(-45deg);
-    top: 41px;
-  }
-
-  .js__styles-swiper-list--no-js {
-    overflow-x: scroll;
-  }
-
-  .js__styles-swiper-item--no-js {
-    margin-right: 30px;
-    margin-bottom: 20px;
-  }
-
-  .js__swiper-button--no-js {
+  .js__nav--no--active {
     display: none;
   }
 
-  .js__menu--hidden {
-    display: none;
-  }
-
-  .js__styles-height--active {
+  .js__header-full-size{
     min-height: 100vh;
-    max-height: max-content;
-  }
-
-  .js__styles-height--active .js__menu-button {
-    top: 50px;
-  }
-
-  .js__menu-color--change {
-    background: #ffffff;
-  }
-
-  .js__cart-color--change svg {
-    stroke: #1d1613;
-  }
-
-  .js__logo-color--change svg {
-    fill: #a87b62;
-  }
-
-  .js__button-color--change::before {
-    background: #1d1613;
-    box-shadow: 0 8px 0 0 #1d1613, 0 -8px 0 0 #1d1613;
-  }
-
-  .js__menu-button--show {
-    display: block;
-  }
-}
-
-@media (max-width: $tablet-width) {
-  .js__styles-height--active .js__menu-button {
-    top: 33px;
-  }
-
-  .js__filters--hidden h3::before {
-    transform: rotate(-45deg);
-    top: 25px;
-  }
-
-  .js__questions--hidden p::before {
-    transform: rotate(-45deg);
-    top: 17px;
-  }
-
-  .js__questions--hidden p {
-    padding-bottom: 21px;
-  }
-
-  .js__styles-swiper-list--no-js {
-    overflow-x: scroll;
-    width: 100%;
-  }
-
-  .js__styles-swiper-item--no-js {
-    margin-right: 30px;
-  }
-
-  .js__filter--popup {
-    background: #ffffff;
-    position: relative;
-    top: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 120;
-  }
-
-  .js__form-button-closed--active {
-    border: none;
-    display: block;
-    position: absolute;
-    top: -15px;
-    right: -11px;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background: #1d1613;
-    cursor: pointer;
-    z-index: 50;
+    height: max-content;
   }
 }

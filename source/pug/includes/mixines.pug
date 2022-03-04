@@ -7,7 +7,7 @@ mixin roomsParametres([category, area, size, price])
       p Размеры (ШхГхВ) — #{size}
     li.rooms__parametres-item.roms__price
       p Цена за сутки: #{price}
-  button.rooms__button.button(type="button") Забронировать
+  a.rooms__button.button.button__order(href='#popup_booking') Забронировать
 
 mixin picture([urlDesktop, urlTablet, urlMobile, widthTablet, widthDesktop, widthImg, heightImg, alt, formatBase])
   picture
@@ -25,21 +25,21 @@ mixin rooms(title)
     h2 #{title}
     .rooms__wrapper.slider
       ul.rooms__list
-        li.rooms__item.rooms__item--active
+        li.rooms__item.rooms__item-1.rooms__item--active
           .rooms__img
             block
             +picture(picturesRoomsEconomPlus)
           .rooms__info
             block
             +roomsParametres(roomEconomPlus)
-        li.rooms__item
+        li.rooms__item.rooms__item-2
           .rooms__img
             block
             +picture(picturesRoomsComfort)
           .rooms__info
             block
             +roomsParametres(roomComfort)
-        li.rooms__item
+        li.rooms__item.rooms__item-3
           .rooms__img
             block
             +picture(picturesRoomsSuite)

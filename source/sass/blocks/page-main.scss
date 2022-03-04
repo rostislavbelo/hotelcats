@@ -1,4 +1,16 @@
-.page-main{
+.page-main {
   overflow-x: inherit;
   margin: 0 0 120px 0;
+}
+
+@media (max-width: $desktop-width) {
+  .page-main {
+    margin: 0 0 80px 0;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .page-main {
+    margin: 0 0 30px 0;
+  }
 }

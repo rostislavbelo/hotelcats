@@ -1,0 +1,67 @@
+.popup.popup_booking.js.js__booking#popup_booking
+  form.popup_booking-form.js__booking-form(action="https://echo.htmlacademy.ru" method="post")
+    h2 Забронировать номер
+    .popup_booking-input-name-owner
+      label.visually-hidden(for="owner-name") Ваше имя
+      input(type="text"
+        minlength="2"
+        maxlength="40"
+        id="owner-name"
+        name="owner-name"
+        placeholder="Ваше имя"
+        title="Введите Ваше имя"
+        required)
+    .popup_booking-input-name-cat
+      label.visually-hidden(for="cat-name") Имя Питомца
+      input(type="text"
+        minlength="1"
+        maxlength="40"
+        id="cat-name"
+        name="cat-name"
+        placeholder="Имя Питомца"
+        title="Введите имя Вашего Питомца")
+    .popup_booking-input-phone
+      label.visually-hidden(for="phone") Телефон
+      input(type="tel"
+        minlength="7"
+        maxlength="14"
+        id="phone"
+        name="phone"
+        placeholder="Телефон"
+        title="Введите Ваш номер телефона"
+        pattern="[0-9]{7,14}")
+    .popup_booking-input-email
+      label.visually-hidden(for="email") Телефон
+      input(type="email"
+        minlength="5"
+        maxlength="45"
+        id="email"
+        name="email"
+        placeholder="E-mail"
+        title="Введите Вашу электронную почту"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+        required)
+    .popup_booking-input-dates
+      span Дата заезда&#8195;с&#8194;
+        label.visually-hidden(for="check-in") Дата заезда
+        input(type="date"
+          id="check-in"
+          name="check-in"
+          value="2022-01-26"
+          title="Введите желаемую дату заезда питомца"
+          required)
+        |&#8195;по&#8195;
+        label.visually-hidden(for="check-out") Дата выезда
+        input(type="date"
+          id="check-out"
+          name="check-out"
+          value="2022-02-26"
+          placeholder="26.02.2022"
+          title="Введите желаемую дату окончания размещения"
+          required
+          pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}")
+    button.popup_booking-button-submit.button.js__booking-button-submit(type="submit") Отправить заявку
+    button.popup_booking-button-close-form.js__booking-button-close-form(type="button")
+
+
+

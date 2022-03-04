@@ -10,19 +10,20 @@
 @import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/hamburger.scss";
-//@import "blocks/page-footer.scss";
+@import "blocks/page-footer.scss";
 @import "blocks/nav-block.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/promo.scss";
 @import "blocks/advantage.scss";
-////@import "blocks/rooms.scss";
-//@import "blocks/slider-rooms.scss";
-//@import "blocks/comments.scss";
+@import "blocks/rooms.scss";
+@import "blocks/slider.scss";
+@import "blocks/comments.scss";
+@import "blocks/popup.scss";
 
 
 //Vendor
 //@import "vendor/swiper.scss";
-//@import "vendor/leaflet.scss";
+@import "vendor/leaflet.scss";
 
 //JS
-//@import "js/js.scss";
+@import "js/js.scss";

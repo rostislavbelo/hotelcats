@@ -1,24 +1,27 @@
 .nav-block__wrapper
   .nav-block__logo-wrapper
-    a.nav-block__logo-link(aria-label="Логотип Котейка" href="#")
+    a.nav-block__logo-link(aria-label="Логотип Котейка"
+                          href="#"
+                          tabindex = currentUrl == "index.html" ? "-1" : ""
+                          class = currentUrl == "index.html" ? "nav-block__logo-main-href" : "")
       svg(width="64" height="52")
         use(xlink:href="img/sprite_auto.svg#logo")
 
-  nav.main-nav
+  nav.main-nav.js__nav
     ul.main-nav__list
-      li.main-nav__item(class = currentUrl == "index.html" ? "main-nav__item--active" : "")
-        a.main-nav__link(href="#")
-          span Почему мы?
-      li.main-nav__item(class = {"main-nav__item--active" : currentUrl == "rooms.html"})
+      li.main-nav__item.js__nav-element(class = currentUrl == "index.html" ? "main-nav__item--active" : "")
+        a.main-nav__link(href="#advantages")
+          span Главное
+      li.main-nav__item.js__nav-element(class = {"main-nav__item--active" : currentUrl == "rooms.html"})
         a.main-nav__link(href="#")
           span Номера
-      li.main-nav__item
-        a.main-nav__link(href="#")
+      li.main-nav__item.js__nav-element
+        a.main-nav__link(href="#comments")
           span Отзывы
-      li.main-nav__item
-        a.main-nav__link(href="#")
+      li.main-nav__item.js__nav-element
+        a.main-nav__link(href="#contacts")
           span Как нас найти
-  button.nav-block__button.hamburger
+  button.nav-block__button.hamburger.js__nav-button
     span.hamburger__element
     span.hamburger__element
     span.hamburger__element

@@ -98,7 +98,7 @@
     width: 100%;
     padding: 0 25px;
     box-sizing: border-box;
-    margin: 0 0 140px 0;
+    margin: 0 0 80px 0;
   }
 
   .advantages__wrapper {
@@ -111,9 +111,9 @@
     @include pseudo;
     width: 367px;
     height: 314px;
-    background: url("../img/icons/paw-big.svg") no-repeat;
-    top: -122px;
-    right: -181px;
+    background: url("../img/icons/paw-big-tablet.svg") no-repeat;
+    top: -34px;
+    right: -253px;
     z-index: -1;
   }
 
@@ -171,6 +171,105 @@
     width: 91px;
     height: 91px;
     margin: 0 0 20px 0;
+
+    @media (min-width: 1023px) and (max-width: 1260px) {
+      margin-bottom: 20px;
+    }
+  }
+
+  .advantages__item p {
+    font-family: $lato;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    color: #1a212f;
+    margin: 0;
+
+    @media (min-width: 1023px) and (max-width: 1260px) {
+      font-size: calc(14px + (16 - 14) * ((100vw - 1023px) / (1260 - 1023)));
+    }
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .advantages {
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    margin: 0 0 60px 0;
+  }
+
+  .advantages__wrapper {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .advantages__wrapper::after {
+    @include pseudo;
+    width: 367px;
+    height: 314px;
+    background: url("../img/icons/paw-big-tablet.svg") no-repeat;
+    top: -34px;
+    right: -253px;
+    z-index: -1;
+  }
+
+  .advantages__title p {
+    text-align: center;
+    font-family: $rubik;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #1a212f;
+    margin: 0 0 50px 0;
+  }
+
+  .advantages__list {
+    width: 100%;
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 30px;
+    row-gap: 20px;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .advantages__item {
+    max-width: 100%;
+    min-height: 240px;
+    padding: 30px 30px 30px 30px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    border-radius: 8px;
+
+    @media (min-width: 1023px) and (max-width: 1260px) {
+      min-height: calc(1vw * 321 / (1260/ 100));
+      padding: 15px;
+    }
+  }
+
+  .advantages__item h3 {
+    font-family: $rubik;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    color: #1a212f;
+    margin: 0 0 10px 0;
+
+    @media (min-width: 1023px) and (max-width: 1260px) {
+      margin-bottom: 10px;
+      font-size: calc(19px + (22 - 19) * ((100vw - 1023px) / (1260 - 1023)));
+    }
+  }
+
+  .advantages__item svg {
+    width: 75px;
+    height: 75px;
+    margin: 0 0 15px 0;
 
     @media (min-width: 1023px) and (max-width: 1260px) {
       margin-bottom: 20px;
