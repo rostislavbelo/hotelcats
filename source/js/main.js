@@ -21,7 +21,7 @@
 
   //Кастомная иконка-маркер, путь и размеры
   const basicBeachIcon = L.icon({
-    iconUrl: '/img/icons/cat-in-map.svg', iconSize: [52, 78],
+    iconUrl: '../img/icons/cat-in-map.svg', iconSize: [52, 78],
   });
 
   //Установка иконки-маркера на нужные координаты плюс подсказка по клику на маркер
