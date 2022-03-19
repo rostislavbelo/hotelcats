@@ -1,25 +1,58 @@
 - var lang = "ru";
 - var title = "Котейка - гостиница для котиков";
 
-- var roomEconomPlus = ["Эконом плюс", "0,90 м2", "90х100х180 см", "200₽"]
-- var roomComfort = ["Комфорт", "1,13 м2", "100х125х180 см", "250₽"]
-- var roomSuite = ["Сьют", "1,56 м2", "125х125х180 см", "350₽"]
-
 -
   var picturesRoomsComfort = ["img/comfort", "img/comfort",
-                              "img/comfort", "767", "1023", "600", "404",
-                              "Кот-британ в номере комфорт", "jpg"]
+    "img/comfort", "767", "1023", "600", "404",
+    "Кот-британ в номере комфорт", "jpg"]
 
 -
   var picturesRoomsEconomPlus = ["img/economical", "img/economical",
-                              "img/economical", "767", "1023", "600", "404",
-                              "Рыжий котёнок в номере эконом", "jpg"]
+    "img/economical", "767", "1023", "600", "404",
+    "Рыжий котёнок в номере эконом", "jpg"]
 
 -
   var picturesRoomsSuite = ["img/suite", "img/suite",
-                              "img/suite", "767", "1023", "600", "404",
-                              "Кошка в гнезде в номере сьют", "jpg"]
+    "img/suite", "767", "1023", "600", "404",
+    "Кошка в гнезде в номере сьют", "jpg"]
 
 -
   var mapFooter = ["img/map", "img/map", "img/map", "767", "1023", "798",
-                   "580", "Карта местоположения гостиницы Котейка", "jpg"]
+    "580", "Карта местоположения гостиницы Котейка", "jpg"]
+
+-
+  var picturesOffersEconom = ["img/offers/offers-econom", "img/offers/offers-econom",
+    "img/offers/offers-econom", "767", "1023", "270", "185",
+    "Полосатый кот в номере Эконом", "jpg"]
+
+-
+  var picturesOffersEconomPlus = ["img/offers/offers-econom-plus", "img/offers/offers-econom-plus",
+    "img/offers/offers-econom-plus", "767", "1023", "270", "185",
+    "Пёстрая кошка номере Эконом-Плюс", "jpg"]
+
+-
+  var picturesOffersComfort = ["img/offers/offers-comfort", "img/offers/offers-comfort",
+    "img/offers/offers-comfort", "767", "1023", "270", "185",
+    "Дымчатый кот номере Комфорт", "jpg"]
+
+-
+  var picturesOffersSuite = ["img/offers/offers-suite", "img/offers/offers-suite",
+    "img/offers/offers-suite", "767", "1023", "270", "185",
+    "Полосатая кошка в номере Сьют", "jpg"]
+
+-
+  var picturesOffersLuxury = ["img/offers/offers-luxury", "img/offers/offers-luxury",
+    "img/offers/offers-luxury", "767", "1023", "270", "185",
+    "Полосатая кошка спит в номере Люкс", "jpg"]
+
+-
+  var picturesOffersSuperLuxury  = ["img/offers/offers-super-luxury", "img/offers/offers-super-luxury",
+    "img/offers/offers-super-luxury", "767", "1023", "270", "185",
+    "Белая кошка играет в номере Супер люкс", "jpg"]
+
+- var roomEconom = ["Эконом", "0,63 м2", "90х70х180 см", "100₽", "#", true, false, false, false, false, picturesOffersEconom]
+- var roomEconomPlus = ["Эконом плюс", "0,90 м2", "90х100х180 см", "200₽", "#", false, true, true, false, false, picturesOffersEconomPlus]
+- var roomComfort = ["Комфорт", "1,13 м2", "100х125х180 см", "250₽", "#", false, true, true, true, false, picturesOffersComfort]
+- var roomSuite = ["Сьют", "1,56 м2", "125х125х180 см", "350₽", "#", false, true, true, true, false, picturesOffersSuite]
+- var roomLuxury = ["Люкс", "2,56 м2", "160х160х180 см", "500₽", "#", false, true, true, true, true, picturesOffersLuxury]
+- var roomSuperLuxury = ["Супер-Люкс", "2,88 м2", "180х125х180 см", "600₽", "#", false, true, true, true, true, picturesOffersSuperLuxury]

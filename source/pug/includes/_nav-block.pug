@@ -1,8 +1,8 @@
 .nav-block__wrapper
   .nav-block__logo-wrapper
     a.nav-block__logo-link(aria-label="Логотип Котейка"
-                          href="#"
-                          tabindex = currentUrl == "index.html" ? "-1" : ""
+                          href = currentUrl == "index.html" ? "#" : "index.html"
+                          tabindex = currentUrl == "index.html" ? "-1" : "0"
                           class = currentUrl == "index.html" ? "nav-block__logo-main-href" : "")
       svg(width="64" height="52")
         use(xlink:href="img/sprite_auto.svg#logo")
@@ -10,13 +10,13 @@
   nav.main-nav.js__nav
     ul.main-nav__list
       li.main-nav__item.js__nav-element(class = currentUrl == "index.html" ? "main-nav__item--active" : "")
-        a.main-nav__link(href="#advantages")
+        a.main-nav__link(href="index.html")
           span Главное
-      li.main-nav__item.js__nav-element(class = {"main-nav__item--active" : currentUrl == "rooms.html"})
-        a.main-nav__link(href="#")
+      li.main-nav__item.js__nav-element(class = {"main-nav__item--active" : currentUrl == "offers.html"})
+        a.main-nav__link(href="offers.html")
           span Номера
       li.main-nav__item.js__nav-element
-        a.main-nav__link(href="#comments")
+        a.main-nav__link(href="index.html#comments")
           span Отзывы
       li.main-nav__item.js__nav-element
         a.main-nav__link(href="#contacts")

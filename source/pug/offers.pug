@@ -1,0 +1,70 @@
+extends components/main-prototype
+block name-page
+  - var currentUrl = "offers.html"
+block main-content
+  section.offers
+    .offers__wrapper
+      h1.visually-hidden Бронирование номеров в гостинице для кошек
+      p Наши номера
+      .offers__main-filter
+        h2.visually-hidden Подобрать номер по параметрам
+        form.offers__main-form(action="https://echo.htmlacademy.ru" method="post")
+          .offers__fiters-price
+            p Цена за сутки,₽
+            ul.offers__fiters-price-list
+              li.offers__fiters-minprice.offers__fiters-price-item
+                span от
+                input(type="text" name="minprice" maxlength="4" id="minprice" value="100")
+                label.visually-hidden(for="minprice") Минимальная цена
+              li.offers__fiters-maxprice.offers__fiters-price-item
+                span до
+                input(type="text" name="maxprice" maxlength="4" id="maxprice" value="600")
+                label.visually-hidden(for="maxprice") Максимальная цена
+          .offers__fiters-area
+            p Площадь
+            ul.offers__fiters-area-list
+              +itemFilterArea(["0,63", "0,90", "1,13", "1,56", "2,56","2,88"])
+          .offers__fiters-equipment
+            p Оснащение номера
+            ul.offers__fiters-equipment-list
+              +itemFilterEquipment(["Пустой номер", "Лежак", "Когтеточка", "Игровой-комплекс", "Домик"])
+
+      .offers__booking-options
+        .offers__filter-select(tabindex="0")
+          .offers__option-default По площади
+            svg(width="5" height="10" aria-label="Сортировка вариантов проживания кошек")
+              use(xlink:href="img/sprite_auto.svg#arrow-select")
+          ul.offers__pseudo-select
+            li.offers__pseudo-option.offers__pseudo-option-1(tabindex="0") По площади
+              svg(width="5" height="10" aria-label="Сортировка вариантов проживания кошек")
+                use(xlink:href="img/sprite_auto.svg#arrow-select")
+            li.offers__pseudo-option.offers__pseudo-option-2(tabindex="0") По площади
+              svg(width="5" height="10" aria-label="По площади, по возрастанию")
+                use(xlink:href="img/sprite_auto.svg#arrow-select-down")
+            li.offers__pseudo-option.offers__pseudo-option-3(tabindex="0") По цене
+              svg(width="5" height="10" aria-label="По цене, по убыванию")
+                use(xlink:href="img/sprite_auto.svg#arrow-select")
+            li.offers__pseudo-option.offers__pseudo-option-4(tabindex="0") По цене
+              svg(width="5" height="10" aria-label="По цене, по убыванию")
+                use(xlink:href="img/sprite_auto.svg#arrow-select-down")
+      ul.offers__list
+        +offers-cards(roomEconom)
+        +offers-cards(roomEconomPlus)
+        +offers-cards(roomComfort)
+        +offers-cards(roomSuite)
+        +offers-cards(roomLuxury)
+        +offers-cards(roomSuperLuxury)
+
+  section.special-offer
+    h2.visually-hidden Специальное предложение
+    .special-offer__wrapper
+      .special-offer__content
+        .special-offer__title
+          p Каждый 7-й день
+          span бесплатно!
+        .special-offer__text
+          p Акция действует при размещении в&nbsp;номерах&nbsp;“Люкс” и “Супер-Люкс”
+        a.special-offer__button.button.button-order Забронировать
+
+
+

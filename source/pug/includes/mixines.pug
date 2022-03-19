@@ -5,9 +5,9 @@ mixin roomsParametres([category, area, size, price])
       p Площадь - #{area}
     li.rooms__parametres-item.rooms__size
       p Размеры (ШхГхВ) — #{size}
-    li.rooms__parametres-item.roms__price
+    li.rooms__parametres-item.rooms__price
       p Цена за сутки: #{price}
-  a.rooms__button.button.button__order(href='#popup_booking') Забронировать
+  a.rooms__button.button.button-order(href='#popup_booking') Забронировать
 
 mixin picture([urlDesktop, urlTablet, urlMobile, widthTablet, widthDesktop, widthImg, heightImg, alt, formatBase])
   picture
@@ -18,7 +18,7 @@ mixin picture([urlDesktop, urlTablet, urlMobile, widthTablet, widthDesktop, widt
     source(type="image/webp"
       srcset = urlDesktop + ".webp 1x, " + urlDesktop + "@2x" + ".webp 2x")
     img(src = urlDesktop + "." + formatBase, srcset= urlDesktop + "@2x." + formatBase + " 2x",
-        width = widthImg, height = heightImg, alt = alt, loading = "lazy")
+      width = widthImg, height = heightImg, alt = alt, loading = "lazy")
 
 mixin rooms(title)
   section.rooms
@@ -47,3 +47,63 @@ mixin rooms(title)
             block
             +roomsParametres(roomSuite)
     include _slider-buttons.pug
+
+mixin offers-cards([title, area, size, price, href, icon1, icon2, icon3, icon4, icon5, image])
+  li.offers__item
+    a.offers__link(href = href)
+      .offers__image
+        block
+        +picture(image)
+      .offers__info
+        p #{title}
+        ul.offers__booking-parametres
+          li.offers__booking-size
+            p Размеры (ШхГхВ) -
+            span #{size}
+          li.offers__booking-area
+            p Площадь -
+            span #{ area}
+          li.offers__booking-equipment
+            p Оснащение номера
+            .offers__equipment-icons
+              ul.offers__icons-list
+                if icon1 == true
+                  li.offers__icons-item.offers__icons-tooltip(data-title="Пустой номер")
+                    svg(width="16" height="16")
+                      use(xlink:href="img/sprite_auto.svg#empty")
+                if icon2 == true
+                  li.offers__icons-item.offers__icons-tooltip(data-title="Лежак")
+                    svg(width="16" height="12")
+                      use(xlink:href="img/sprite_auto.svg#bed")
+                if icon3 == true
+                  li.offers__icons-item.offers__icons-tooltip(data-title="Когтеточка")
+                    svg(width="14" height="16")
+                      use(xlink:href="img/sprite_auto.svg#tower")
+                if icon4 == true
+                  li.offers__icons-item.offers__icons-tooltip(data-title="Игровой комплекс")
+                    svg(width="16" height="16")
+                      use(xlink:href="img/sprite_auto.svg#game")
+                if icon5 == true
+                  li.offers__icons-item.offers__icons-tooltip(data-title="Домик")
+                    svg(width="16" height="16")
+                      use(xlink:href="img/sprite_auto.svg#house")
+          li.offers__booking-price
+            p Цена за сутки:
+            span #{ price}
+    .offers__booking-button
+      form(action="#popup_booking")
+        button.button.offers__button.button-order Забронировать
+
+mixin itemFilterArea(data)
+  each value, index in data
+    - var dif = index+1
+    li(class= "offers__fiters-item" class= "offers__fiters-area-item" class="offers__fiters-area-item" + dif)
+      input.visually-hidden(type="checkbox" name="area" + dif id="area" + dif checked tabindex="-1")
+      label(for="area" + dif tabindex="0") #{value} м2
+
+mixin itemFilterEquipment(data)
+  each value, index in data
+    - var dif = index+1
+    li(class= "offers__fiters-item" class= "offers__fiters-equipment-item" class="offers__fiters-equipment-item" + dif)
+      input.visually-hidden(type="checkbox" name="equipment" + dif id="equipment" + dif  checked tabindex="-1")
+      label(for="equipment" + dif tabindex="0") #{value}

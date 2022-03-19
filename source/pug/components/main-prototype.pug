@@ -2,10 +2,10 @@ include variables.pug
 include ../includes/mixines.pug
 
 doctype html
-html.page(lang=lang)
+html.page.js(lang=lang)
 
   include ../includes/_head
-  body.page-body.js.js__body
+  body.page-body.js__body.popup
     block name-page
     header.page-header.nav-block.js__header
       include ../includes/_nav-block
