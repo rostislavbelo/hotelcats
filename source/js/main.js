@@ -404,7 +404,7 @@
     const showMessage = () => {
       const arrayCardHidden = [];
       cardOffer.forEach((card) => {
-        // Проверка отсутсвия display: none у каждой карточки
+        // Проверка отсутсвия display:none у каждой карточки
         if (getComputedStyle(card).display !== 'none') {
           arrayCardHidden.push(card);
         }
@@ -450,6 +450,7 @@
         card.classList.remove('offers__item--hidden-type3');
         card.classList.remove('offers__item--hidden-type4');
         card.classList.remove('offers__item--hidden-type5');
+        card.classList.remove('offers__item--hidden-type6');
       });
       showMessage();
     });
@@ -459,10 +460,10 @@
         const price = card.querySelector('.offers__booking-price span');
         const priceNumber = parseInt(price.textContent, 10);
         if (priceNumber < minPrice.value) {
-          card.classList.add('offers__item--hidden');
+          card.classList.add('offers__item--hidden-type6');
         }
         if (priceNumber >= minPrice.value) {
-          card.classList.remove('offers__item--hidden');
+          card.classList.remove('offers__item--hidden-type6');
         }
       });
       showMessage();
@@ -473,13 +474,85 @@
         const price = card.querySelector('.offers__booking-price span');
         const priceNumber = parseInt(price.textContent, 10);
         if (priceNumber > maxPrice.value) {
-          card.classList.add('offers__item--hidden');
+          card.classList.add('offers__item--hidden-type6');
         }
         if (priceNumber <= maxPrice.value) {
-          card.classList.remove('offers__item--hidden');
+          card.classList.remove('offers__item--hidden-type6');
         }
       });
       showMessage();
+    });
+  }
+}());
+
+//Сортировка карточек по цене и по площади. Код заимствован (https://qna.habr.com/q/577900), доделан под задачу, разобран по пунктам.
+
+(function () {
+  //определяем опорный элемент (родительский блок карточек)
+  const parent = document.querySelector('.offers__list');
+  // собираем карточки в кучу
+  const items = document.querySelectorAll('.offers__item');
+  //определяем зоны-кнопки нажатия
+  const buttonSortAreaIncrease = document.querySelector('.offers__pseudo-option-1');
+  const buttonSortAreaDecrease = document.querySelector('.offers__pseudo-option-2');
+  const buttonSortPriceIncrease = document.querySelector('.offers__pseudo-option-3');
+  const buttonSortPriceDecrease = document.querySelector('.offers__pseudo-option-4');
+
+  if (parent, items) {
+
+    const sortingCards = (directionSort) => {
+      // заводим пустой объект
+      const SortElements = new Object();
+
+      // проходим по карточкам форичом
+      items.forEach((item, indx) => {
+
+        // находим строку с данными о цене и приводим её к числу, удаляем текстовый мусор, заносим в переменную
+        const itemValue = parseInt(item.querySelector('.offers__booking-price span').textContent.replace('₽', ''), 10);
+
+        //вариант для сортировки по площади
+        /* const itemValue = parseInt(item.querySelector('.offers__booking-area span').textContent.replace('м2', ''), 10); */
+
+        // Получаем объект вот такой формы: 100: {element: li.offers__item, index: 0}, 200: {element: li.offers__item, index: 1} и так далее
+        SortElements[itemValue] = { 'element': item, 'index': indx };
+      });
+
+      // Из объекта методом keys получаем массив с коллекцией ключей, вот- ['100', '200', '250', '350', '500', '600']
+      const keys = Object.keys(SortElements);
+
+      //Объявляем функцию, которая получает на вход строки a и b, парсит на всякий случай их в числа, сравнивает и возвращет 1 или -1 для метода sort
+      function compareNumeric(a, b) {
+        a = parseInt(a, 10);
+        b = parseInt(b, 10);
+        if (a < b) { return 1; }
+        if (a > b) { return -1; }
+      }
+
+      // сортируем массив ключей по убыванию (в данном случае), типа array.sort((a, b) => a - b);
+      keys.sort(compareNumeric);
+      // мапим массив по отсортированным в нужном порядку ключам
+      keys.map((key) => {
+        //методом  insertAdjacentElement расставляем карточки в отсортированном порядке внутрь, в конец опорного элемента - 'beforeend' или 'afterBegin'
+        parent.insertAdjacentElement(directionSort, SortElements[key]['element']);
+      });
+    };
+
+    //Обработчики на сортировку по клику.
+
+    buttonSortPriceIncrease.addEventListener('click', () => {
+      sortingCards('afterBegin');
+    });
+
+    buttonSortPriceDecrease.addEventListener('click', () => {
+      sortingCards('beforeend');
+    });
+
+    buttonSortAreaIncrease.addEventListener('click', () => {
+      sortingCards('afterBegin');
+    });
+
+    buttonSortAreaDecrease.addEventListener('click', () => {
+      sortingCards('beforeend');
     });
   }
 }());

@@ -14,10 +14,6 @@
     opacity: 0.5;
   }
 
-  &--active{
-    display: block;
-  }
-
   @media (min-width: $desktop-width) {
     display: none;
   }
@@ -33,6 +29,7 @@
 }
 
 .hamburger--active {
+  display: block;
   top: 25px;
   width: 24px;
   height: 24px;

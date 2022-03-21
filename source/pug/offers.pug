@@ -49,8 +49,7 @@ block main-content
               svg(width="5" height="10" aria-label="По цене, по убыванию")
                 use(xlink:href="img/sprite_auto.svg#arrow-select-down")
       ul.offers__list
-        p Ничего не найдено!
-        br Попробуйте изменить параметры поиска или сбросьте фильтр.
+        p.offers__list-message Ничего не найдено!<br>Попробуйте изменить параметры поиска или сбросьте фильтр.
           +offers-cards(roomEconom)
           +offers-cards(roomEconomPlus)
           +offers-cards(roomComfort)
