@@ -55,27 +55,27 @@
                 <ul class="offers__fiters-area-list">
                   <li class="offers__fiters-item offers__fiters-area-item offers__fiters-area-item1">
                     <input class="visually-hidden" type="checkbox" name="area1" id="area1" checked="checked" tabindex="-1">
-                    <label for="area1" tabindex="0">0,63 м2</label>
+                    <label for="area1" tabindex="0" data-value="0,63">0,63 м2</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-area-item offers__fiters-area-item2">
                     <input class="visually-hidden" type="checkbox" name="area2" id="area2" checked="checked" tabindex="-1">
-                    <label for="area2" tabindex="0">0,90 м2</label>
+                    <label for="area2" tabindex="0" data-value="0,90">0,90 м2</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-area-item offers__fiters-area-item3">
                     <input class="visually-hidden" type="checkbox" name="area3" id="area3" checked="checked" tabindex="-1">
-                    <label for="area3" tabindex="0">1,13 м2</label>
+                    <label for="area3" tabindex="0" data-value="1,13">1,13 м2</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-area-item offers__fiters-area-item4">
                     <input class="visually-hidden" type="checkbox" name="area4" id="area4" checked="checked" tabindex="-1">
-                    <label for="area4" tabindex="0">1,56 м2</label>
+                    <label for="area4" tabindex="0" data-value="1,56">1,56 м2</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-area-item offers__fiters-area-item5">
                     <input class="visually-hidden" type="checkbox" name="area5" id="area5" checked="checked" tabindex="-1">
-                    <label for="area5" tabindex="0">2,56 м2</label>
+                    <label for="area5" tabindex="0" data-value="2,56">2,56 м2</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-area-item offers__fiters-area-item6">
                     <input class="visually-hidden" type="checkbox" name="area6" id="area6" checked="checked" tabindex="-1">
-                    <label for="area6" tabindex="0">2,88 м2</label>
+                    <label for="area6" tabindex="0" data-value="2,88">2,88 м2</label>
                   </li>
                 </ul>
               </div>
@@ -84,26 +84,27 @@
                 <ul class="offers__fiters-equipment-list">
                   <li class="offers__fiters-item offers__fiters-equipment-item offers__fiters-equipment-item1">
                     <input class="visually-hidden" type="checkbox" name="equipment1" id="equipment1" checked="checked" tabindex="-1">
-                    <label for="equipment1" tabindex="0">Пустой номер</label>
+                    <label for="equipment1" tabindex="0" data-hidden="type1">Пустой номер</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-equipment-item offers__fiters-equipment-item2">
                     <input class="visually-hidden" type="checkbox" name="equipment2" id="equipment2" checked="checked" tabindex="-1">
-                    <label for="equipment2" tabindex="0">Лежак</label>
+                    <label for="equipment2" tabindex="0" data-hidden="type2">Лежак</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-equipment-item offers__fiters-equipment-item3">
                     <input class="visually-hidden" type="checkbox" name="equipment3" id="equipment3" checked="checked" tabindex="-1">
-                    <label for="equipment3" tabindex="0">Когтеточка</label>
+                    <label for="equipment3" tabindex="0" data-hidden="type3">Когтеточка</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-equipment-item offers__fiters-equipment-item4">
                     <input class="visually-hidden" type="checkbox" name="equipment4" id="equipment4" checked="checked" tabindex="-1">
-                    <label for="equipment4" tabindex="0">Игровой-комплекс</label>
+                    <label for="equipment4" tabindex="0" data-hidden="type4">Игровой-комплекс</label>
                   </li>
                   <li class="offers__fiters-item offers__fiters-equipment-item offers__fiters-equipment-item5">
                     <input class="visually-hidden" type="checkbox" name="equipment5" id="equipment5" checked="checked" tabindex="-1">
-                    <label for="equipment5" tabindex="0">Домик</label>
+                    <label for="equipment5" tabindex="0" data-hidden="type5">Домик</label>
                   </li>
                 </ul>
               </div>
+              <button class="offers__fiters-button button" type="reset">Сбросить фильтр</button>
             </form>
           </div>
           <div class="offers__booking-options">
@@ -138,7 +139,8 @@
             </div>
           </div>
           <ul class="offers__list">
-            <li class="offers__item"><a class="offers__link" href="#">
+            <p class="offers__list-message">Ничего не найдено!<br>Попробуйте изменить параметры поиска или сбросьте фильтр.</p>
+            <li class="offers__item" data-area="0,63" data-price="100"><a class="offers__link" href="#">
                 <div class="offers__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/offers/offers-econom.webp 1x, img/offers/offers-econom@2x.webp 2x">
@@ -178,7 +180,7 @@
                 </form>
               </div>
             </li>
-            <li class="offers__item"><a class="offers__link" href="#">
+            <li class="offers__item" data-area="0,90" data-price="200"><a class="offers__link" href="#">
                 <div class="offers__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/offers/offers-econom-plus.webp 1x, img/offers/offers-econom-plus@2x.webp 2x">
@@ -223,7 +225,7 @@
                 </form>
               </div>
             </li>
-            <li class="offers__item"><a class="offers__link" href="#">
+            <li class="offers__item" data-area="1,13"><a class="offers__link" href="#">
                 <div class="offers__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/offers/offers-comfort.webp 1x, img/offers/offers-comfort@2x.webp 2x">
@@ -254,7 +256,7 @@
                               <use xlink:href="img/sprite_auto.svg#tower"></use>
                             </svg>
                           </li>
-                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой комплекс">
+                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой-комплекс">
                             <svg width="16" height="16">
                               <use xlink:href="img/sprite_auto.svg#game"></use>
                             </svg>
@@ -273,7 +275,7 @@
                 </form>
               </div>
             </li>
-            <li class="offers__item"><a class="offers__link" href="#">
+            <li class="offers__item" data-area="1,56"><a class="offers__link" href="#">
                 <div class="offers__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/offers/offers-suite.webp 1x, img/offers/offers-suite@2x.webp 2x">
@@ -304,7 +306,7 @@
                               <use xlink:href="img/sprite_auto.svg#tower"></use>
                             </svg>
                           </li>
-                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой комплекс">
+                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой-комплекс">
                             <svg width="16" height="16">
                               <use xlink:href="img/sprite_auto.svg#game"></use>
                             </svg>
@@ -323,7 +325,7 @@
                 </form>
               </div>
             </li>
-            <li class="offers__item"><a class="offers__link" href="#">
+            <li class="offers__item" data-area="2,56"><a class="offers__link" href="#">
                 <div class="offers__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/offers/offers-luxury.webp 1x, img/offers/offers-luxury@2x.webp 2x">
@@ -354,7 +356,7 @@
                               <use xlink:href="img/sprite_auto.svg#tower"></use>
                             </svg>
                           </li>
-                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой комплекс">
+                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой-комплекс">
                             <svg width="16" height="16">
                               <use xlink:href="img/sprite_auto.svg#game"></use>
                             </svg>
@@ -378,7 +380,7 @@
                 </form>
               </div>
             </li>
-            <li class="offers__item"><a class="offers__link" href="#">
+            <li class="offers__item" data-area="2,88"><a class="offers__link" href="#">
                 <div class="offers__image">
                   <picture>
                     <source type="image/webp" media="(max-width: 767px)" srcset="img/offers/offers-super-luxury.webp 1x, img/offers/offers-super-luxury@2x.webp 2x">
@@ -409,7 +411,7 @@
                               <use xlink:href="img/sprite_auto.svg#tower"></use>
                             </svg>
                           </li>
-                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой комплекс">
+                          <li class="offers__icons-item offers__icons-tooltip" data-title="Игровой-комплекс">
                             <svg width="16" height="16">
                               <use xlink:href="img/sprite_auto.svg#game"></use>
                             </svg>

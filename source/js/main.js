@@ -318,7 +318,6 @@
       });
     }
   }
-
 }());
 
 // Псевдоселект карточек номеров
@@ -366,7 +365,6 @@
         filter.classList.remove('offers__filter-select--hidden');
       }
     });
-
   }
 }());
 
@@ -375,13 +373,113 @@
 (function () {
   const label = document.querySelectorAll('.offers__fiters-item');
 
-  label.forEach((element) => {
-    element.addEventListener('keydown', (evt) => {
-      if (evt.keyCode === 32 || evt.key === 'Enter') {
-        evt.preventDefault();
-        const input = element.querySelector('input');
-        input.toggleAttribute('checked');
-      }
+  if (label) {
+
+    label.forEach((element) => {
+      element.addEventListener('keydown', (evt) => {
+        if (evt.keyCode === 32 || evt.key === 'Enter') {
+          evt.preventDefault();
+          const input = element.querySelector('input');
+          input.toggleAttribute('checked');
+        }
+      });
     });
-  });
+  }
+}());
+
+// Работа фильтров страницы каталога
+
+(function () {
+
+  const filterArea = document.querySelectorAll('.offers__fiters-area-item label');
+  const filterEquipment = document.querySelectorAll('.offers__fiters-equipment-item label');
+  const resetButton = document.querySelector('.offers__main-form');
+  const cardOffer = document.querySelectorAll('.offers__item');
+  const minPrice = document.querySelector('.offers__fiters-minprice input');
+  const maxPrice = document.querySelector('.offers__fiters-maxprice input');
+  const message = document.querySelector('.offers__list-message');
+
+  if (filterArea, filterEquipment, resetButton, cardOffer, minPrice, maxPrice) {
+
+    const showMessage = () => {
+      const arrayCardHidden = [];
+      cardOffer.forEach((card) => {
+        // Проверка отсутсвия display: none у каждой карточки
+        if (getComputedStyle(card).display !== 'none') {
+          arrayCardHidden.push(card);
+        }
+      });
+
+      if (arrayCardHidden.length === 0) {
+        message.classList.add('offers__list-message--active');
+      }
+      if (arrayCardHidden.length > 0) {
+        message.classList.remove('offers__list-message--active');
+      }
+    };
+
+    filterArea.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        const attrFilter = filter.getAttribute('data-value');
+        const classToggler = document.querySelector(`.offers__item[data-area='${attrFilter}']`);
+        classToggler.classList.toggle('offers__item--hidden');
+        showMessage();
+      });
+    });
+
+    filterEquipment.forEach((filter) => {
+      filter.addEventListener('click', () => {
+        const filterValue = filter.textContent;
+        const attrHidden = filter.getAttribute('data-hidden');
+        const offerCard = document.querySelectorAll('.offers__item');
+        offerCard.forEach((card) => {
+          const ppp = card.querySelector(`[data-title = '${filterValue}']`);
+          if (ppp !== null) {
+            card.classList.toggle(`offers__item--hidden-${attrHidden}`);
+          }
+        });
+        showMessage();
+      });
+    });
+
+    resetButton.addEventListener('reset', () => {
+      cardOffer.forEach((card) => {
+        card.classList.remove('offers__item--hidden');
+        card.classList.remove('offers__item--hidden-type1');
+        card.classList.remove('offers__item--hidden-type2');
+        card.classList.remove('offers__item--hidden-type3');
+        card.classList.remove('offers__item--hidden-type4');
+        card.classList.remove('offers__item--hidden-type5');
+      });
+      showMessage();
+    });
+
+    minPrice.addEventListener('change', () => {
+      cardOffer.forEach((card) => {
+        const price = card.querySelector('.offers__booking-price span');
+        const priceNumber = parseInt(price.textContent, 10);
+        if (priceNumber < minPrice.value) {
+          card.classList.add('offers__item--hidden');
+        }
+        if (priceNumber >= minPrice.value) {
+          card.classList.remove('offers__item--hidden');
+        }
+      });
+      showMessage();
+    });
+
+    maxPrice.addEventListener('change', () => {
+      cardOffer.forEach((card) => {
+        const price = card.querySelector('.offers__booking-price span');
+        const priceNumber = parseInt(price.textContent, 10);
+        if (priceNumber > maxPrice.value) {
+          card.classList.add('offers__item--hidden');
+        }
+        if (priceNumber <= maxPrice.value) {
+          card.classList.remove('offers__item--hidden');
+        }
+      });
+      showMessage();
+    });
+  }
 }());

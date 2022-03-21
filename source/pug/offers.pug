@@ -28,6 +28,7 @@ block main-content
             p Оснащение номера
             ul.offers__fiters-equipment-list
               +itemFilterEquipment(["Пустой номер", "Лежак", "Когтеточка", "Игровой-комплекс", "Домик"])
+          button.offers__fiters-button.button(type="reset") Сбросить фильтр
 
       .offers__booking-options
         .offers__filter-select(tabindex="0")
@@ -48,12 +49,14 @@ block main-content
               svg(width="5" height="10" aria-label="По цене, по убыванию")
                 use(xlink:href="img/sprite_auto.svg#arrow-select-down")
       ul.offers__list
-        +offers-cards(roomEconom)
-        +offers-cards(roomEconomPlus)
-        +offers-cards(roomComfort)
-        +offers-cards(roomSuite)
-        +offers-cards(roomLuxury)
-        +offers-cards(roomSuperLuxury)
+        p Ничего не найдено!
+        br Попробуйте изменить параметры поиска или сбросьте фильтр.
+          +offers-cards(roomEconom)
+          +offers-cards(roomEconomPlus)
+          +offers-cards(roomComfort)
+          +offers-cards(roomSuite)
+          +offers-cards(roomLuxury)
+          +offers-cards(roomSuperLuxury)
 
   section.special-offer
     h2.visually-hidden Специальное предложение

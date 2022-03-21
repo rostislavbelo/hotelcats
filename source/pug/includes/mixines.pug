@@ -48,8 +48,8 @@ mixin rooms(title)
             +roomsParametres(roomSuite)
     include _slider-buttons.pug
 
-mixin offers-cards([title, area, size, price, href, icon1, icon2, icon3, icon4, icon5, image])
-  li.offers__item
+mixin offers-cards([title, area, size, price, href, icon1, icon2, icon3, icon4, icon5, image, areaValue])
+  li.offers__item(data-area = areaValue)
     a.offers__link(href = href)
       .offers__image
         block
@@ -80,7 +80,7 @@ mixin offers-cards([title, area, size, price, href, icon1, icon2, icon3, icon4, 
                     svg(width="14" height="16")
                       use(xlink:href="img/sprite_auto.svg#tower")
                 if icon4 == true
-                  li.offers__icons-item.offers__icons-tooltip(data-title="Игровой комплекс")
+                  li.offers__icons-item.offers__icons-tooltip(data-title="Игровой-комплекс")
                     svg(width="16" height="16")
                       use(xlink:href="img/sprite_auto.svg#game")
                 if icon5 == true
@@ -99,11 +99,11 @@ mixin itemFilterArea(data)
     - var dif = index+1
     li(class= "offers__fiters-item" class= "offers__fiters-area-item" class="offers__fiters-area-item" + dif)
       input.visually-hidden(type="checkbox" name="area" + dif id="area" + dif checked tabindex="-1")
-      label(for="area" + dif tabindex="0") #{value} м2
+      label(for="area" + dif tabindex="0" data-value = value) #{value} м2
 
 mixin itemFilterEquipment(data)
   each value, index in data
     - var dif = index+1
     li(class= "offers__fiters-item" class= "offers__fiters-equipment-item" class="offers__fiters-equipment-item" + dif)
       input.visually-hidden(type="checkbox" name="equipment" + dif id="equipment" + dif  checked tabindex="-1")
-      label(for="equipment" + dif tabindex="0") #{value}
+      label(for="equipment" + dif tabindex="0" data-hidden = "type" + dif) #{value}
