@@ -8,7 +8,7 @@
   font-weight: bold;
   font-size: 36px;
   line-height: 43px;
-  color: #1A212F;
+  color: rgb(26, 33, 47);
   text-align: center;
   margin: 0 50px 70px 50px;
 }
@@ -55,7 +55,7 @@
   width: 500px;
   min-height: 284px;
   background: #ffffff;
-  box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+  box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
   border-radius: 8px;
   padding: 40px 50px 40px 100px;
   box-sizing: border-box;
@@ -92,7 +92,7 @@
   @include pseudo;
   width: 13px;
   height: 13px;
-  background: #FAC663;
+  background: rgb(250, 198, 99);
   border-radius: 50%;
   left: -22px;
   top: 1.5px;
@@ -103,17 +103,16 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 19px;
-  color: #1A212F;
+  color: rgb(26, 33, 47);
   margin: 0 0 20px 0;
 }
 
 .rooms__button {
   width: 206px;
   height: 50px;
-  box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+  box-shadow: 0 5 25px rgba(26, 33, 47, 0.1);
   padding: 0 0 0 30px;
   text-decoration: none;
-  display: block;
   margin: 0;
   display: flex;
   justify-content: flex-start;
@@ -134,7 +133,7 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 38px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
     text-align: center;
     margin: 0 50px 70px 50px;
   }
@@ -173,11 +172,6 @@
     justify-content: space-between;
   }
 
-  .rooms__img {
-    width: 600px;
-    height: 404px;
-  }
-
   .rooms__img img {
     width: 100%;
     height: 100%;
@@ -197,7 +191,7 @@
     width: 325px;
     min-height: 249px;
     background: #ffffff;
-    box-shadow: 0px 0px 25px rgba(208, 208, 208, 0.25);
+    box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
     border-radius: 8px;
     padding: 20px 15px 20px 3%;
     box-sizing: border-box;
@@ -251,7 +245,7 @@
     @include pseudo;
     width: 13px;
     height: 13px;
-    background: #FAC663;
+    background: rgb(250, 198, 99);
     border-radius: 50%;
     left: -22px;
     top: 1.5px;
@@ -262,7 +256,7 @@
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
     margin: 0 0 15px 0;
 
     @media (min-width: 767px) and (max-width: 1023px) {
@@ -273,7 +267,7 @@
   .rooms__button {
     width: 206px;
     height: 50px;
-    box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+    box-shadow: 0 5 25px rgba(26, 33, 47, 0.1);
     padding: 0 0 0 30px;
   }
 }
@@ -290,7 +284,7 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 38px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
     text-align: center;
     margin: 0 50px 50px 50px;
   }
@@ -335,29 +329,24 @@
   }
 
   .rooms__img {
-    width: unset;
-    height: unset;
+    width: 260px;
+    height: 175px;
     position: absolute;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-  }
 
-  .rooms__img img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .rooms__img {
-    width: 260px;
-    height: 175px;
-
-    @media (min-width: 319px) and (max-width:767px) {
+    @media (min-width: 319px) and (max-width: 767px) {
       width: calc(1vw * 260 / (319 / 100));
       height: calc(1vw * 175 / (319 / 100));
       max-width: 500px;
       max-height: 337px;
     }
+  }
+
+  .rooms__img img {
+    width: 100%;
+    height: 100%;
   }
 
   .rooms__info {
@@ -366,7 +355,7 @@
     max-width: 520px;
     min-height: max-content;
     background: #ffffff;
-    box-shadow: 0px 0px 25px rgba(208, 208, 208, 1.0);
+    box-shadow: 0 0 25px rgba(208, 208, 208, 1);
     border-radius: 8px;
     padding: 20px 10px 20px 10px;
     box-sizing: border-box;
@@ -410,7 +399,7 @@
     @include pseudo;
     width: 13px;
     height: 13px;
-    background: #FAC663;
+    background: rgb(250, 198, 99);
     border-radius: 50%;
     left: -22px;
     top: 1.5px;
@@ -432,7 +421,7 @@
   .rooms__button {
     width: 206px;
     height: 50px;
-    box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
+    box-shadow: 0 5px 25px rgba(26, 33, 47, 0.1);
     padding: 0 0 0 30px;
     margin: 0 0 200px 0;
 

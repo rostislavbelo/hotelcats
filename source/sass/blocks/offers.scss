@@ -517,7 +517,7 @@
   color: #1a212f;
 }
 
-.offers__icons-tooltip:hover:before {
+.offers__icons-tooltip:hover::before {
   @include pseudo;
   width: 10px;
   height: 10px;
@@ -537,7 +537,7 @@
 .offers__fiters-button {
   width: 185px;
   height: 42px;
-  border: 2px solid #FAC663;
+  border: 2px solid rgb(250, 198, 99);
   box-sizing: border-box;
   border-radius: 25px;
   background: #ffffff;
@@ -673,7 +673,7 @@
     position: relative;
     display: grid;
     grid-template-columns: max-content max-content;
-    column-gap: 15px
+    column-gap: 15px;
   }
 
   .offers__fiters-area input {
@@ -730,7 +730,7 @@
     top: -1px;
 
     @media (min-width: 767px) and (max-width: 1024px) {
-      height: calc(1vw * 311/ (1024 / 100));
+      height: calc(1vw * 311 / (1024 / 100));
     }
   }
 
@@ -874,7 +874,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #1A212F;
+    color: hwb(220 10% 82%);
     margin: 0 0 20px 0;
   }
 
@@ -929,7 +929,7 @@
     height: 20px;
     border: 1px solid rgb(225, 225, 225);
     box-sizing: border-box;
-    top: -4px
+    top: -4px;
   }
 
   .offers__fiters-equipment-list label::before,
@@ -963,7 +963,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
   }
 
   .offers__filter-select {
@@ -1001,13 +1001,13 @@
     }
 
     &:hover {
-      border: 1px solid rgba(255, 114, 54, .4);
-      box-shadow: 0 2px 12px rgba(255, 114, 54, .4);
+      border: 1px solid rgba(255, 114, 54, 0.4);
+      box-shadow: 0 2px 12px rgba(255, 114, 54, 0.4);
     }
 
     &:focus {
-      border: 1px solid rgba(255, 114, 54, .4);
-      box-shadow: 0 2px 12px rgba(255, 114, 54, .4);
+      border: 1px solid rgba(255, 114, 54, 0.4);
+      box-shadow: 0 2px 12px rgba(255, 114, 54, 0.4);
     }
   }
 
@@ -1054,7 +1054,6 @@
   .offers__pseudo-select--active {
     display: block;
     height: max-content;
-    border-radius: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -1131,7 +1130,7 @@
 
   .offers__main-filter {
     grid-area: filter-max;
-    margin: 0 0 10px 0;
+    margin: 0 0 52px;
     max-width: unset;
     width: 100%;
     display: flex;
@@ -1200,7 +1199,7 @@
     position: relative;
     display: grid;
     grid-template-columns: max-content max-content;
-    column-gap: 15px
+    column-gap: 15px;
   }
 
   .offers__fiters-area input {
@@ -1258,13 +1257,12 @@
     top: -1px;
 
     @media (min-width: 319px) and (max-width: 490px) {
-      height: calc(1vw * 195/ (319 / 100));
+      height: calc(1vw * 195 / (319 / 100));
     }
 
     @media (min-width: 490px) and (max-width: 768px) {
       height: 301px;
     }
-
   }
 
   .offers__image img {
@@ -1408,7 +1406,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
     margin: 0 0 20px 0;
   }
 
@@ -1468,7 +1466,7 @@
     height: 20px;
     border: 1px solid rgb(225, 225, 225);
     box-sizing: border-box;
-    top: -4px
+    top: -4px;
   }
 
   .offers__fiters-equipment-list label::before,
@@ -1502,7 +1500,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 17px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
   }
 
   .offers__filter-select {
@@ -1540,13 +1538,13 @@
     }
 
     &:hover {
-      border: 1px solid rgba(255, 114, 54, .4);
-      box-shadow: 0 2px 12px rgba(255, 114, 54, .4);
+      border: 1px solid rgba(255, 114, 54, 0.4);
+      box-shadow: 0 2px 12px rgba(255, 114, 54, 0.4);
     }
 
     &:focus {
-      border: 1px solid rgba(255, 114, 54, .4);
-      box-shadow: 0 2px 12px rgba(255, 114, 54, .4);
+      border: 1px solid rgba(255, 114, 54, 0.4);
+      box-shadow: 0 2px 12px rgba(255, 114, 54, 0.4);
     }
   }
 
@@ -1593,7 +1591,6 @@
   .offers__pseudo-select--active {
     display: block;
     height: max-content;
-    border-radius: 0;
     position: absolute;
     top: 0;
     left: 0;
@@ -1635,9 +1632,5 @@
     bottom: unset;
     left: unset;
     transform: unset;
-  }
-
-  .offers__main-filter {
-    margin: 0 0 52px;
   }
 }

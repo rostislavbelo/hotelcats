@@ -53,7 +53,7 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 24px;
-  color: #1A212F;
+  color: rgb(26, 33, 47);
   max-width: 420px;
 }
 
@@ -153,7 +153,7 @@
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
     max-width: 300px;
   }
 
@@ -200,7 +200,7 @@
     position: relative;
     width: 100%;
     min-height: 340px;
-    background: linear-gradient(180deg, #FF9B53 -5.96%, #F8B653 74.9%);
+    background: linear-gradient(180deg, rgb(255, 155, 83) -5.96%, rgb(248, 182, 83) 74.9%);
     margin: 0 0 60px;
 
     &::after {
@@ -218,7 +218,7 @@
       width: 355px;
       height: 450px;
       background: url("../img/icons/paw-big-mobile-white.svg") no-repeat;
-      transform: scale(.19) scaleX(-1) translateX(1571px);
+      transform: scale(0.19) scaleX(-1) translateX(1571px);
       bottom: -196px;
       left: 50%;
     }
@@ -263,7 +263,7 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 24px;
-    color: #1A212F;
+    color: rgb(26, 33, 47);
     max-width: 300px;
   }
 
