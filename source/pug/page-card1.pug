@@ -1,0 +1,20 @@
+extends components/main-prototype
+block name-page
+  - var currentUrl = "page-card1.html"
+block main-content
+  section.card-room
+    h1.visually-hidden Информация о номере Супер-Люкс
+    .card-room__wrapper
+      ul.card-room__preview-list
+        +cardRoomPreview(picturesOffersSuperLuxuryPreview1)
+        +cardRoomPreview(picturesOffersSuperLuxuryPreview2)
+        +cardRoomPreview(picturesOffersSuperLuxuryPreview3)
+
+      .card-room__card
+        +offers-cards(roomSuperLuxuryPageCard)
+
+  section.other-numbers
+    .other-numbers__wrapper
+      +rooms("Другие номера")
+
+

@@ -71,22 +71,27 @@ mixin offers-cards([title, area, size, price, href, icon1, icon2, icon3, icon4, 
                   li.offers__icons-item.offers__icons-tooltip(data-title="Пустой номер")
                     svg(width="16" height="16")
                       use(xlink:href="img/sprite_auto.svg#empty")
+                    span Пустой номер
                 if icon2 == true
                   li.offers__icons-item.offers__icons-tooltip(data-title="Лежак")
                     svg(width="16" height="12")
                       use(xlink:href="img/sprite_auto.svg#bed")
+                    span Лежак
                 if icon3 == true
                   li.offers__icons-item.offers__icons-tooltip(data-title="Когтеточка")
                     svg(width="14" height="16")
                       use(xlink:href="img/sprite_auto.svg#tower")
+                    span Когтеточка
                 if icon4 == true
                   li.offers__icons-item.offers__icons-tooltip(data-title="Игровой-комплекс")
                     svg(width="16" height="16")
                       use(xlink:href="img/sprite_auto.svg#game")
+                    span Игровой-комплекс - 3 яруса
                 if icon5 == true
                   li.offers__icons-item.offers__icons-tooltip(data-title="Домик")
                     svg(width="16" height="16")
                       use(xlink:href="img/sprite_auto.svg#house")
+                    span Домик
           li.offers__booking-price
             p Цена за сутки:
             span #{ price}
@@ -107,3 +112,9 @@ mixin itemFilterEquipment(data)
     li(class= "offers__fiters-item" class= "offers__fiters-equipment-item" class="offers__fiters-equipment-item" + dif)
       input.visually-hidden(type="checkbox" name="equipment" + dif id="equipment" + dif  checked tabindex="-1")
       label(for="equipment" + dif tabindex="0" data-hidden = "type" + dif) #{value}
+
+
+mixin cardRoomPreview(picture)
+  li.card-room__preview-item
+    a.card-room__preview-link(href="#")
+      +picture(picture)

@@ -1,0 +1,242 @@
+.card-room__wrapper {
+  padding: 40px 40px;
+}
+
+.card-room__wrapper {
+  max-width: 1040px;
+  margin: 0 auto 55px;
+  display: flex;
+}
+
+.card-room {
+  .offers__link {
+    display: flex;
+    pointer-events: none;
+  }
+
+  .offers__item {
+    width: 100%;
+    max-width: unset;
+    border: none;
+    box-shadow: none;
+  }
+
+  .offers__image {
+    width: 500px;
+    height: 396px;
+  }
+
+  .offers__booking-equipment {
+    flex-direction: column;
+  }
+
+  .offers__icons-list {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .offers__icons-item {
+    margin: 8px 0 0 0;
+  }
+
+  .offers__booking-button {
+    position: absolute;
+    left: 66%;
+    bottom: 20px;
+  }
+
+  .offers__button {
+    width: 206px;
+    height: 50px;
+    padding-left: 37px;
+  }
+
+  .offers__info {
+    margin: 0 0 0 21px;
+    padding-left: 20px;
+  }
+
+  .offers__icons-item span {
+    display: inline-block;
+    vertical-align: baseline;
+    font-family: $lato;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: rgb(26, 33, 47);
+    margin: 0 0 0 8px;
+  }
+
+  .offers__booking-parametres {
+    margin-bottom: 40px;
+  }
+
+  .offers__booking-size {
+    flex-direction: row;
+  }
+}
+
+.card-room__preview-list {
+  min-width: 70px;
+  list-style-type: none;
+  padding: 0 0 0 0;
+  margin: 0 30px 0 0;
+}
+
+.card-room__preview-item {
+  width: 70px;
+  height: 112px;
+
+  &:hover {
+    transform: scale(1.025);
+  }
+}
+
+.card-room__preview-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.card-room__preview-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: $desktop-width) {
+  .card-room__wrapper {
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-room__wrapper {
+    max-width: 1040px;
+    margin: 0 auto 55px;
+    display: flex;
+  }
+
+  .card-room {
+    .offers__link {
+      display: flex;
+      pointer-events: none;
+    }
+
+    .offers__item {
+      max-width: 100%;
+      border: none;
+      box-shadow: none;
+    }
+
+    .offers__image {
+      width: 500px;
+      height: 396px;
+
+      @media (min-width: 767px) and (max-width: 900px) {
+        width: calc(1vw * 500 / (900 / 100));
+        height: calc(1vw * 396 / (900 / 100));
+      }
+    }
+
+    .offers__booking-equipment {
+      flex-direction: column;
+    }
+
+    .offers__icons-list {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .offers__icons-item {
+      margin: 6px 0 0 0;
+    }
+
+    .offers__booking-button {
+      position: absolute;
+      left: 501px;
+      bottom: 20px;
+
+      @media (min-width: 767px) and (max-width: 900px) {
+        left: calc(1vw * 501 / (900 / 100));
+        bottom: 42px;
+      }
+    }
+
+    .offers__button {
+      width: 206px;
+      height: 50px;
+      padding-left: 37px;
+    }
+
+    .offers__info {
+      margin: 0 0 0 10px;
+      padding: 10px 10px 110px;
+    }
+
+    .offers__info>p {
+      margin-bottom: 15px;
+    }
+
+    .offers__icons-item span {
+      display: inline-block;
+      vertical-align: baseline;
+      font-family: $lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgb(26, 33, 47);
+      margin: 0 0 0 8px;
+    }
+
+    .offers__booking-parametres {
+      margin-bottom: 40px;
+    }
+
+    .offers__booking-area,
+    .offers__booking-equipment,
+    .offers__booking-price,
+    .offers__booking-size {
+      margin-bottom: 10px;
+    }
+
+    .card-room__preview-list {
+      min-width: 70px;
+      list-style-type: none;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      width: 500px;
+      align-items: center;
+      flex-wrap: wrap;
+
+      @media (min-width: 767px) and (max-width: 900px) {
+        width: calc(1vw * 500 / (900 / 100));
+      }
+    }
+
+    .card-room__preview-item {
+      width: 70px;
+      height: 112px;
+    }
+
+    .card-room__preview-item:last-child {
+      margin-bottom: 15px;
+    }
+
+    .card-room__preview-item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    .card-room__preview-link {
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

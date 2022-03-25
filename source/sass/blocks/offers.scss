@@ -587,6 +587,10 @@
   display: block;
 }
 
+.offers__icons-item span{
+  display: none;
+}
+
 
 @media (max-width: $desktop-width) {
   .offers {

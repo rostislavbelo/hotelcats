@@ -135,6 +135,7 @@
 
 (function () {
   const roomSection = document.querySelector('.rooms');
+  const blockSliderButtons = document.querySelectorAll('.slider-buttons');
 
   if (roomSection) {
     const room = roomSection.querySelectorAll('.rooms__item');
@@ -149,6 +150,10 @@
     const buttonNext = roomSection.querySelector('.slider-buttons__button-next');
 
     if (room, room1, room2, room3, bullet, bullet1, bullet2, bullet3, buttonBack, buttonNext) {
+
+      blockSliderButtons.forEach((block) => {
+        block.classList.add('slider-buttons--active');
+      });
 
       const selectionsSliderBullet = (roomArg, bulletArg) => {
         bulletArg.addEventListener('click', () => {
@@ -498,7 +503,7 @@
   const buttonSortPriceIncrease = document.querySelector('.offers__pseudo-option-3');
   const buttonSortPriceDecrease = document.querySelector('.offers__pseudo-option-4');
 
-  if (parent, items) {
+  if (parent, items, buttonSortAreaIncrease, buttonSortAreaDecrease, buttonSortPriceIncrease, buttonSortPriceDecrease) {
 
     const sortingCards = (directionSort) => {
       // заводим пустой объект
