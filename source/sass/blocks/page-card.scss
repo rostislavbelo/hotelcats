@@ -240,3 +240,153 @@
     }
   }
 }
+
+@media (max-width: $tablet-width) {
+  .card-room__wrapper {
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-room__wrapper {
+    max-width: 1040px;
+    margin: 0 auto 15px;
+    display: flex;
+  }
+
+  .card-room {
+    .offers__item {
+      max-width: max-content;
+      border: none;
+      box-shadow: none;
+    }
+
+    .offers__link {
+      display: flex;
+      pointer-events: none;
+      flex-direction: column;
+    }
+
+    .offers__image {
+      width: 280px;
+      height: 222px;
+
+      @media (min-width: 319px) and (max-width: 500px) {
+        width: calc(1vw * 280 / (319 / 100));
+        height: calc(1vw * 222 / (319/ 100));
+      }
+
+      @media (min-width: 500px) and (max-width: 768px) {
+        width: 440px;
+        height: 349px;
+      }
+    }
+
+    .offers__booking-equipment {
+      flex-direction: column;
+    }
+
+    .offers__icons-list {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .offers__icons-item {
+      margin: 6px 0 0 0;
+    }
+
+    .offers__booking-button {
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-60%);
+      width: 206px;
+    }
+
+    .offers__button {
+      width: 206px;
+      height: 50px;
+      padding-left: 37px;
+    }
+
+    .offers__info {
+      margin: 0 0 0 10px;
+      padding: 10px 10px 90px;
+    }
+
+    .offers__info>p {
+      margin-bottom: 15px;
+    }
+
+    .offers__icons-item span {
+      display: inline-block;
+      vertical-align: baseline;
+      font-family: $lato;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 19px;
+      color: rgb(26, 33, 47);
+      margin: 0 0 0 8px;
+    }
+
+    .offers__booking-parametres {
+      margin-bottom: 10px;
+    }
+
+    .offers__booking-area,
+    .offers__booking-equipment,
+    .offers__booking-price,
+    .offers__booking-size {
+      margin-bottom: 10px;
+    }
+
+    .card-room__preview-list {
+      min-width: 70px;
+      list-style-type: none;
+      padding: 0 0 0 0;
+      margin: 0 0 0 0;
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      flex-wrap: wrap;
+      max-width: 440px;
+
+      @media (min-width: 319px) and (max-width: 500px) {
+        width: calc(1vw * 280 / (319 / 100));
+      }
+
+      @media (min-width: 500px) and (max-width: 768px) {
+        width: 440px;
+      }
+    }
+
+    .card-room__card {
+      display: flex;
+      justify-content: center;
+    }
+
+    .card-room__preview-item {
+      width: 70px;
+      height: 112px;
+    }
+
+    .card-room__preview-item:last-child {
+      margin-bottom: 15px;
+    }
+
+    .card-room__preview-item:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    .card-room__preview-link {
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
