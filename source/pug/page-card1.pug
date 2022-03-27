@@ -4,17 +4,16 @@ block name-page
 block main-content
   section.card-room
     h1.visually-hidden Информация о номере Супер-Люкс
-    .card-room__wrapper
+    .card-room__wrapper.offers
       ul.card-room__preview-list
         +cardRoomPreview(picturesOffersSuperLuxuryPreview1)
         +cardRoomPreview(picturesOffersSuperLuxuryPreview2)
         +cardRoomPreview(picturesOffersSuperLuxuryPreview3)
 
-      .card-room__card
+      ul.card-room__card
         +offers-cards(roomSuperLuxuryPageCard)
 
-  section.other-numbers
-    .other-numbers__wrapper
-      +rooms("Другие номера")
+  +rooms("Другие номера")
+
 
 
